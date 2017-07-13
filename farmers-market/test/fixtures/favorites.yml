@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  market: one
+  farmer: one
+  product: one
+
+two:
+  market: two
+  farmer: two
+  product: two

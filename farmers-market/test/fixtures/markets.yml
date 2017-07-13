@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  days_open: 2017-07-13
+  time_open: 2017-07-13 19:08:17
+  description: MyText
+  website_link: MyString
+  image: MyString
+  location: one
+
+two:
+  days_open: 2017-07-13
+  time_open: 2017-07-13 19:08:17
+  description: MyText
+  website_link: MyString
+  image: MyString
+  location: two
