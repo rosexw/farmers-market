@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyText
+  product_type: MyText
+  on_hand: false
+  organic: false
+  non_gmo: false
+
+two:
+  product_name: MyText
+  product_type: MyText
+  on_hand: false
+  organic: false
+  non_gmo: false
