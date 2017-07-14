@@ -10,10 +10,63 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170713181400) do
+ActiveRecord::Schema.define(version: 20170714152711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "farmer_markets", force: :cascade do |t|
+    t.integer  "market_id"
+    t.integer  "farmer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_farmer_markets_on_farmer_id", using: :btree
+    t.index ["market_id"], name: "index_farmer_markets_on_market_id", using: :btree
+  end
+
+  create_table "farmer_products", force: :cascade do |t|
+    t.integer  "farmer_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_farmer_products_on_farmer_id", using: :btree
+    t.index ["product_id"], name: "index_farmer_products_on_product_id", using: :btree
+  end
+
+  create_table "farmers", force: :cascade do |t|
+    t.string   "farm_name"
+    t.string   "string"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_no"
+    t.string   "integer"
+    t.string   "website_link"
+    t.string   "image"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "markets", force: :cascade do |t|
+    t.string   "days_open"
+    t.string   "date"
+    t.string   "time_open"
+    t.string   "datetime"
+    t.string   "description"
+    t.string   "text"
+    t.string   "website_link"
+    t.string   "string"
+    t.string   "image"
+    t.string   "address"
+    t.string   "city"
+    t.string   "province"
+    t.string   "postal_code"
+    t.string   "lat"
+    t.string   "long"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.text     "product_name"
@@ -25,4 +78,18 @@ ActiveRecord::Schema.define(version: 20170713181400) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "string"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_foreign_key "farmer_markets", "farmers"
+  add_foreign_key "farmer_markets", "markets"
+  add_foreign_key "farmer_products", "farmers"
+  add_foreign_key "farmer_products", "products"
 end

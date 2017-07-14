@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  days_open: MyString
+  date: MyString
+  time_open: MyString
+  datetime: MyString
+  description: MyString
+  text: MyString
+  website_link: MyString
+  string: MyString
+  image: MyString
+  string: MyString
+  address: MyString
+  string: MyString
+  city: MyString
+  string: MyString
+  province: MyString
+  string: MyString
+  postal_code: MyString
+  string: MyString
+  lat: MyString
+  string: MyString
+  long: MyString
+
+two:
+  days_open: MyString
+  date: MyString
+  time_open: MyString
+  datetime: MyString
+  description: MyString
+  text: MyString
+  website_link: MyString
+  string: MyString
+  image: MyString
+  string: MyString
+  address: MyString
+  string: MyString
+  city: MyString
+  string: MyString
+  province: MyString
+  string: MyString
+  postal_code: MyString
+  string: MyString
+  lat: MyString
+  string: MyString
+  long: MyString

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farm_name: MyString
+  string: MyString
+  email: MyString
+  string: MyString
+  password_digest: MyString
+  string: MyString
+  first_name: MyString
+  string: MyString
+  last_name: MyString
+  string: MyString
+  phone_no: MyString
+  integer: MyString
+  website_link: MyString
+  string: MyString
+  image: MyString
+  string: MyString
+
+two:
+  farm_name: MyString
+  string: MyString
+  email: MyString
+  string: MyString
+  password_digest: MyString
+  string: MyString
+  first_name: MyString
+  string: MyString
+  last_name: MyString
+  string: MyString
+  phone_no: MyString
+  integer: MyString
+  website_link: MyString
+  string: MyString
+  image: MyString
+  string: MyString
