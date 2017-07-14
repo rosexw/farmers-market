@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714152711) do
+ActiveRecord::Schema.define(version: 20170714181802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,28 +35,20 @@ ActiveRecord::Schema.define(version: 20170714152711) do
 
   create_table "farmers", force: :cascade do |t|
     t.string   "farm_name"
-    t.string   "string"
     t.string   "email"
     t.string   "password_digest"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone_no"
-    t.string   "integer"
     t.string   "website_link"
     t.string   "image"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "phone_no"
+    t.text     "description"
   end
 
   create_table "markets", force: :cascade do |t|
-    t.string   "days_open"
-    t.string   "date"
-    t.string   "time_open"
-    t.string   "datetime"
-    t.string   "description"
-    t.string   "text"
     t.string   "website_link"
-    t.string   "string"
     t.string   "image"
     t.string   "address"
     t.string   "city"
@@ -66,6 +58,9 @@ ActiveRecord::Schema.define(version: 20170714152711) do
     t.string   "long"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.text     "description"
+    t.datetime "time_open"
+    t.date     "days_open"
   end
 
   create_table "products", force: :cascade do |t|
@@ -80,7 +75,6 @@ ActiveRecord::Schema.define(version: 20170714152711) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.string   "string"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "password_digest"
