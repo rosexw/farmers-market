@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # failure, render login form
+      flash[:danger] = 'Invalid email/password combination' # Not quite right!
       redirect_to '/sessions/new'
     end
   end
