@@ -1,7 +1,6 @@
 class UserSessionsController < ApplicationController
   # def new
   # end
-
   include BCrypt
 
   def show
