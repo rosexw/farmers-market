@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :markets
-  resources :farmers
+  resources :farmers, only: [:index, :new, :create]
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
 

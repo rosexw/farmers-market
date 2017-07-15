@@ -1,0 +1,65 @@
+<h1>Register</h1>
+<%= form_for @farmer do |f| %>
+  <% if @farmer.errors.any? %>
+    <div class='error_message'>
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @farmer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+  <div class='field'>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :farm_name %><br />
+    <%= f.text_field :farm_name %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone_no %><br />
+    <%= f.telephone_field :phone_no %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :website_link %><br />
+    <%= f.url_field :website_link %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="actions"><%= f.submit "Register" %></div>
+<% end %>
