@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'registration_bridge/index'
+
   get 'user/new'
 
   get 'user/create'

@@ -8,7 +8,7 @@ class FarmersController < ApplicationController
 
   def create
     if Farmer.exists?(:email => allowed_params[:email]) || User.exists?(:email => allowed_params[:email])
-      redirect_to '/'
+      redirect_to '/sessions/new'
     else
       @farmer = Farmer.new(allowed_params)
       if @farmer.save
