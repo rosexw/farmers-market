@@ -1,13 +1,19 @@
 <div>
   <h1>Connecting farmers to you</h1>
 </div>
-<form id='home_search'>
+<form action = "/search/" id='home_search' method='get'>
   <div class="input-field">
-    <input id="search" type="search" required>
-    <label class="label-icon" for="search"></label>
+  <%= text_field_tag :search, params[:search] %>
   </div>
-  <input class="btn waves-effect waves-light" type="submit" name="action"/>
+<!--   <input class="btn waves-effect waves-light" type="submit" name="action"/> -->
+  <%= submit_tag "Search", :name => nil %>
 </form>
+
+<!-- <%= form_tag '/search/', :method =>'get', :encoding =>  nil do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %> -->
+
+<% end %>
 <div class="row">
   <form class="col s12">
     <div class="row">
@@ -18,3 +24,5 @@
     </div>
   </form>
 </div>
+
+

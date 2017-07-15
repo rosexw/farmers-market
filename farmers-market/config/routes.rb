@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :search
 
   resources :farmers do
     resources :products
