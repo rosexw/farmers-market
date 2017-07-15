@@ -187,6 +187,15 @@ market3 = Market.create({
       non_gmo: 'true'
       })
 
+      product1 = Product.create({
+        id: 4,
+        product_name: 'carrot',
+        product_type: 'vegetable',
+        on_hand: 'true',
+        organic: 'true',
+        non_gmo: 'true'
+        })
+
       frm1 = Farmer.find(1)
       frm2 = Farmer.find(2)
       frm3 = Farmer.find(3)
@@ -199,6 +208,7 @@ market3 = Market.create({
       prd1 = Product.find(1)
       prd2 = Product.find(2)
       prd3 = Product.find(3)
+      prd4 = Product.find(4)
 
 
       puts "Creating Farmer/Market bridge table"
@@ -218,6 +228,11 @@ market3 = Market.create({
         farmer_id: frm3.id
         })
 
+      fm4 = FarmerMarket.create!({
+        market_id: mkt2.id,
+        farmer_id: frm4.id
+        })
+
       puts "Creating Farmer/Product bridge table"
       ## FARMER-PRODUCT
       fp1 = FarmerProduct.create!({
@@ -233,6 +248,11 @@ market3 = Market.create({
       fp3 = FarmerProduct.create!({
         farmer_id: frm2.id,
         product_id: prd3.id
+        })
+
+      fp4 = FarmerProduct.create!({
+        farmer_id: frm3.id,
+        product_id: prd4.id
         })
 
       puts "DONE!"

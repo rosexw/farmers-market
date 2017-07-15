@@ -1,1 +1,8 @@
 <h1>SEARCH RESULTS</h1>
+
+
+
+<% @products.each do |product| %>
+  <h4><%=product.product_name%></h4>
+  <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).id).inspect%>
+<% end %>
