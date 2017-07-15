@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'user/create'
+
   get 'home/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
   resources :farmers, only: [:index, :new, :create]
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
 
 
   resources :farmers do

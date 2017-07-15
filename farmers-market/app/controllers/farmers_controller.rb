@@ -7,11 +7,15 @@ class FarmersController < ApplicationController
   end
 
   def create
-    @farmer = Farmer.new(allowed_params)
-    if @farmer.save
-      redirect_to root_url, notice: 'Thank you for signing up!'
+    if Farmer.exists?(:email => allowed_params[:email]) || User.exists?(:email => allowed_params[:email])
+      redirect_to '/'
     else
-      render :new
+      @farmer = Farmer.new(allowed_params)
+      if @farmer.save
+        redirect_to root_url, notice: 'Thank you for signing up!'
+      else
+        render :new
+      end
     end
   end
 
