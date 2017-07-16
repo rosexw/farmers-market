@@ -1,6 +1,13 @@
 // Place all the styles related to the registrationBridge controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bridge_btn_container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+
 .bridge_btn {
   background-color: #DC453F;
   padding: 15px 32px;

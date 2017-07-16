@@ -1,18 +1,20 @@
 <div>
   <h4 class='center-align'>Connecting farmers to you</h4>
 </div>
-<form action = "/search/" id='home_search' class='row' method='get'>
-  <div class="input-field">
-    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Search by</a><%= text_field_tag :search, params[:search], :class => 'search_bar'%>
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-       <li><a href="#!">farm</a></li>
-       <li><a href="#!">product</a></li>
-    </ul>
-  </div>
-  <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
+<div>
+  <form action = "/search/" id='home_search' class='row form' method='get'>
+    <div class="input-field">
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Search by</a><%= text_field_tag :search, params[:search], :class => 'search_bar'%>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+         <li><a href="#!">market</a></li>
+         <li><a href="#!">product</a></li>
+      </ul>
+    </div>
+    <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
 
-</form>
+  </form>
+</div>
 
 <!-- <%= form_tag '/search/', :method =>'get', :encoding =>  nil do %>
   <%= text_field_tag :search, params[:search] %>
