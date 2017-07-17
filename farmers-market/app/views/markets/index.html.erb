@@ -1,1 +1,3 @@
 <h1>All Markets</h1>
+
+<%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
