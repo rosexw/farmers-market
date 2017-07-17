@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+
+<% if current_user() %>
+  hi user
+<% elsif current_farmer() %>
+  hi farmer
+<% else %>
+  not yet
+<% end %>

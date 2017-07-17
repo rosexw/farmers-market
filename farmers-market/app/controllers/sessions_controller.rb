@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/farmers/new'
+      redirect_to '/registration_bridge/index'
     end
   end
 
