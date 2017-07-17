@@ -1,8 +1,12 @@
 <h1>Dashboard</h1>
 
-<% if current_user() %>
-  hi user
-<% elsif current_farmer() %>
+<% if current_user %>
+  <%= react_component("Profile", {
+    first_name: current_user.first_name,
+    last_name: current_user.last_name,
+    email: current_user.email
+    }) %>
+<% elsif current_farmer %>
   hi farmer
 <% else %>
   not yet
