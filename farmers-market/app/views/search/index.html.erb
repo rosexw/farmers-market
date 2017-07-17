@@ -1,8 +1,23 @@
 <h1>SEARCH RESULTS</h1>
 
 
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Farmer</th>
+      <th>Market</th>
+    </tr>
+  </thead>
 
-<% @products.each do |product| %>
-  <h4><%=product.product_name%></h4>
-  <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%>
-<% end %>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%=product.product_name%></td>
+        <!-- <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%> -->
+        <td>farm</td>
+        <td>market</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
