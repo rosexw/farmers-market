@@ -4,12 +4,11 @@
   <h4><%=@market.name %></h4>
 
   <p>
-    <%= link_to @market do %>
-      <%= image_tag @market.image, alt: @market.name %>
+    <%= link_to @market.website_link do %>
+        <%= image_tag @market.image.thumb, alt: @market.name %>
     <% end %>
   </p>
 
-  <p><%= image_tag ("images/market1.jpeg") %></p>
   <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
   <p><%= link_to 'Market Homepage', @market.website_link %></p>
 </section>
