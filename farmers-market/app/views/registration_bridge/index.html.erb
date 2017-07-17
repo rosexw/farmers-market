@@ -1,5 +1,10 @@
-<h1>RegistrationBridge#index</h1>
-<ul>
-  <li><%= link_to 'Farmer', controller: "farmers", action: "new", id: @farmer %></li>
-  <li><%= link_to 'User', controller: "users", action: "new", id: @user %></li>
-</ul>
+<div class='row'>
+  <h4 class='center-align'>Register as:</h4>
+</div>
+
+<div class='row bridge_btn_container'>
+  <ul>
+    <li class='bridge_btn'><%= link_to 'Farmer', controller: "farmers", action: "new", id: @farmer%></li>
+    <li class='bridge_btn'><%= link_to 'User', controller: "users", action: "new", id: @user%></li>
+  </ul>
+</div>

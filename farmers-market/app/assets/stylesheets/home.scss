@@ -3,14 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #search {
   width: 300px;
-  background-color: #eae9e8;
+  // background-color: #eae9e8;
+  background-color: white;
 }
 
-#home_search {
-  width: 500px;
+.input-field {
   margin: 0 auto;
+}
 
-  .btn {
-    background-color: #f77925;
-  }
+.search_bar {
+  width: 1000px
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+.search_btn {
+  // background-color: #f77925;
+    background-color: #DC453F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

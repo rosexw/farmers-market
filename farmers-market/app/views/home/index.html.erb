@@ -1,13 +1,20 @@
 <div>
-  <h1>Connecting farmers to you</h1>
+  <h4 class='center-align'>Connecting farmers to you</h4>
 </div>
-<form action = "/search/" id='home_search' method='get'>
-  <div class="input-field">
-  <%= text_field_tag :search, params[:search] %>
-  </div>
-<!--   <input class="btn waves-effect waves-light" type="submit" name="action"/> -->
-  <%= submit_tag "Search", :name => nil %>
-</form>
+<div>
+  <form action = "/search/" id='home_search' class='row form' method='get'>
+    <div class="input-field">
+      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Search by</a><%= text_field_tag :search, params[:search], :class => 'search_bar'%>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+         <li><a href="#!">market</a></li>
+         <li><a href="#!">product</a></li>
+      </ul>
+    </div>
+    <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
+
+  </form>
+</div>
 
 <!-- <%= form_tag '/search/', :method =>'get', :encoding =>  nil do %>
   <%= text_field_tag :search, params[:search] %>
@@ -21,8 +28,17 @@
         <input id="postal_code" type="text" class="validate">
         <label for="postal_code" data-error="wrong" data-success="right">Postal Code</label>
       </div>
+      <a class='dropdown-button btn' href='#' data-activates='dropdown2'>day</a>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown2' class='dropdown-content'>
+         <li><a href="#!">Monday</a></li>
+         <li><a href="#!">Tuesday</a></li>
+         <li><a href="#!">Wedensday</a></li>
+         <li><a href="#!">Thursday</a></li>
+         <li><a href="#!">Friday</a></li>
+         <li><a href="#!">Saturday</a></li>
+         <li><a href="#!">Sunday</a></li>
+      </ul>
     </div>
   </form>
 </div>
-
-
