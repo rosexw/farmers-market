@@ -391,92 +391,92 @@ market422 = Market.create({
 
       puts "Creating Farmer/Product bridge table"
       ## FARMER-PRODUCT
-      fp1 = FarmerProduct.create!({
+      fp1 = FarmersProduct.create!({
         farmer_id: frm2.id,
         product_id: prd2.id
         })
 
-      fp2 = FarmerProduct.create!({
+      fp2 = FarmersProduct.create!({
         farmer_id: frm1.id,
         product_id: prd1.id
         })
 
-      fp3 = FarmerProduct.create!({
+      fp3 = FarmersProduct.create!({
         farmer_id: frm2.id,
         product_id: prd3.id
         })
 
-      fp4 = FarmerProduct.create!({
+      fp4 = FarmersProduct.create!({
         farmer_id: frm3.id,
         product_id: prd4.id
         })
 
-      fp5 = FarmerProduct.create!({
+      fp5 = FarmersProduct.create!({
         farmer_id: frm2.id,
         product_id: prd4.id
         })
 
-      fp6 = FarmerProduct.create!({
+      fp6 = FarmersProduct.create!({
         farmer_id: frm4.id,
         product_id: prd4.id
         })
 
-      fp7 = FarmerProduct.create!({
+      fp7 = FarmersProduct.create!({
         farmer_id: frm5.id,
         product_id: prd4.id
         })
 
-      fp8 = FarmerProduct.create!({
+      fp8 = FarmersProduct.create!({
         farmer_id: frm7.id,
         product_id: prd5.id
         })
 
-      fp9 = FarmerProduct.create!({
+      fp9 = FarmersProduct.create!({
         farmer_id: frm6.id,
         product_id: prd6.id
         })
 
-      fp10 = FarmerProduct.create!({
+      fp10 = FarmersProduct.create!({
         farmer_id: frm4.id,
         product_id: prd2.id
         })
 
-      fp11 = FarmerProduct.create!({
+      fp11 = FarmersProduct.create!({
         farmer_id: frm5.id,
         product_id: prd1.id
         })
 
-      fp12 = FarmerProduct.create!({
+      fp12 = FarmersProduct.create!({
         farmer_id: frm6.id,
         product_id: prd3.id
         })
 
-      fp13 = FarmerProduct.create!({
+      fp13 = FarmersProduct.create!({
         farmer_id: frm7.id,
         product_id: prd4.id
         })
 
-      fp14 = FarmerProduct.create!({
+      fp14 = FarmersProduct.create!({
         farmer_id: frm3.id,
         product_id: prd7.id
         })
 
-      fp15 = FarmerProduct.create!({
+      fp15 = FarmersProduct.create!({
         farmer_id: frm5.id,
         product_id: prd7.id
         })
 
-      fp16 = FarmerProduct.create!({
+      fp16 = FarmersProduct.create!({
         farmer_id: frm5.id,
         product_id: prd2.id
         })
 
-      fp17 = FarmerProduct.create!({
+      fp17 = FarmersProduct.create!({
         farmer_id: frm7.id,
         product_id: prd6.id
         })
 
-      fp18 = FarmerProduct.create!({
+      fp18 = FarmersProduct.create!({
         farmer_id: frm1.id,
         product_id: prd6.id
         })

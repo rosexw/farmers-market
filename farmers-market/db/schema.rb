@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714211033) do
+ActiveRecord::Schema.define(version: 20170717151052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 20170714211033) do
     t.datetime "updated_at", null: false
     t.index ["farmer_id"], name: "index_farmer_markets_on_farmer_id", using: :btree
     t.index ["market_id"], name: "index_farmer_markets_on_market_id", using: :btree
-  end
-
-  create_table "farmer_products", force: :cascade do |t|
-    t.integer  "farmer_id"
-    t.integer  "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["farmer_id"], name: "index_farmer_products_on_farmer_id", using: :btree
-    t.index ["product_id"], name: "index_farmer_products_on_product_id", using: :btree
   end
 
   create_table "farmers", force: :cascade do |t|
@@ -45,6 +36,15 @@ ActiveRecord::Schema.define(version: 20170714211033) do
     t.datetime "updated_at",      null: false
     t.text     "description"
     t.string   "phone_no"
+  end
+
+  create_table "farmers_products", force: :cascade do |t|
+    t.integer  "farmer_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_farmers_products_on_farmer_id", using: :btree
+    t.index ["product_id"], name: "index_farmers_products_on_product_id", using: :btree
   end
 
   create_table "markets", force: :cascade do |t|
@@ -85,6 +85,6 @@ ActiveRecord::Schema.define(version: 20170714211033) do
 
   add_foreign_key "farmer_markets", "farmers"
   add_foreign_key "farmer_markets", "markets"
-  add_foreign_key "farmer_products", "farmers"
-  add_foreign_key "farmer_products", "products"
+  add_foreign_key "farmers_products", "farmers"
+  add_foreign_key "farmers_products", "products"
 end

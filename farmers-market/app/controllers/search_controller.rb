@@ -6,8 +6,6 @@ class SearchController < ApplicationController
 
     @products = Product.where(product_name: params[:search])
     puts @products.inspect
-
-
   end
 end
 
