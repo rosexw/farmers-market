@@ -1,22 +1,23 @@
 <h1>SEARCH RESULTS</h1>
 
 
-<table>
+<table class="responsive-table">
   <thead>
     <tr>
       <th>Product</th>
-      <th>Farmer</th>
       <th>Market</th>
     </tr>
   </thead>
 
   <tbody>
     <% @products.each do |product| %>
+      <% m = Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmersProduct.find_by(product_id: product.id).farmer_id).id).market_id)%>
       <tr>
-        <td><%=product.product_name%></td>
-        <td>farm</td>
+        <td> <%=product.product_name%> </td>
         <td>
-        <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmersProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%></td>
+          <p><%= m.name %></p>
+          <%=link_to 'Click here for More Info', "/markets/#{m.id}"%>
+        </td>
       </tr>
     <% end %>
   </tbody>

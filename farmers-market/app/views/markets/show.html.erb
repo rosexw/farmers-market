@@ -1,0 +1,7 @@
+
+<section>
+  <h4><%=@market.name %></h4>
+  <%= image_tag @market.image%>
+  <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
+  <p><%= link_to 'Market Homepage', @market.website_link %></p>
+</section>
