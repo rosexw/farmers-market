@@ -7,8 +7,16 @@ class SearchController < ApplicationController
     @products = Product.where(product_name: params[:search])
     puts @products.inspect
 
+
   end
 end
+
+# <% @farmers.each do |farm| %>
+#   <td><%=farm.farm_name%></td>
+# <% end %>
+# <% @markets.each do |market| %>
+#   <td><%=market.name%></td>
+# <% end %>
 
 # <% @product.each do |p| %>
 #   <h3><%= p.inspect %></h3>
