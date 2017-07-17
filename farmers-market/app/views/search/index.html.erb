@@ -16,7 +16,7 @@
         <td><%=product.product_name%></td>
         <td>farm</td>
         <td>
-        <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%></td>
+        <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmersProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%></td>
       </tr>
     <% end %>
   </tbody>
