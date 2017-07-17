@@ -7,12 +7,6 @@ class SearchController < ApplicationController
     @products = Product.where(product_name: params[:search])
     puts @products.inspect
 
-    # Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%>
-    @markets = Market.where(name: params[ Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id)])
-    puts @markets.inspect
-
-    @farmers = Farmer.where(name: params[ Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id)])
-    puts @farmers.inspect
 
   end
 end

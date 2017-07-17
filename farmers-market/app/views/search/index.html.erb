@@ -14,9 +14,9 @@
     <% @products.each do |product| %>
       <tr>
         <td><%=product.product_name%></td>
-        <!-- <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%> -->
         <td>farm</td>
-        <td>market</td>
+        <td>
+        <%= Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmerProduct.find_by(product_id: product.id).farmer_id).id).market_id).inspect%></td>
       </tr>
     <% end %>
   </tbody>
