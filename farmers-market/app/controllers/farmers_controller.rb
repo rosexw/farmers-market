@@ -6,6 +6,11 @@ class FarmersController < ApplicationController
     @farmer = Farmer.new
   end
 
+  def show
+    @farmer = Farmer.find params[:id]
+    puts @farmer.inspect
+  end
+
   def create
     if Farmer.exists?(:email => allowed_params[:email]) || User.exists?(:email => allowed_params[:email])
       redirect_to '/sessions/new'
