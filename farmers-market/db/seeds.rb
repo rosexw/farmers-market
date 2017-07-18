@@ -231,7 +231,7 @@ market422 = Market.create({
 
     product420 = Product.create({
       id: 420,
-      product_name: 'carrot',
+      product_name: 'carrots',
       product_type: 'vegetable',
       on_hand: 'true',
       organic: 'true',
@@ -249,7 +249,7 @@ market422 = Market.create({
 
     product422 = Product.create({
       id: 422,
-      product_name: 'honey',
+      product_name: 'honeys',
       product_type: 'other',
       on_hand: 'true',
       organic: 'false',
@@ -258,7 +258,7 @@ market422 = Market.create({
 
       product423 = Product.create({
         id: 423,
-        product_name: 'carrot',
+        product_name: 'carrots',
         product_type: 'vegetable',
         on_hand: 'true',
         organic: 'true',
@@ -267,7 +267,7 @@ market422 = Market.create({
 
       product424 = Product.create({
         id: 424,
-        product_name: 'cabbage',
+        product_name: 'cabbages',
         product_type: 'vegetable',
         on_hand: 'true',
         organic: 'false',

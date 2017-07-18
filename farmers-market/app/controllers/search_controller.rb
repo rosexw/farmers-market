@@ -4,8 +4,10 @@ class SearchController < ApplicationController
     # @product = Product.find(:all, :conditions => ['product_name LIKE ?',  "%#{params[:search]}%"])
     puts 'RESULTS'
 
-    @products = Product.where(product_name: params[:search])
-    puts @products.inspect
+
+
+    @markets = Market.find_markets_by_product_name(params[:product].pluralize.downcase);
+
   end
 end
 
@@ -22,8 +24,8 @@ end
 
 # SELECT products.product_name, markets.name, markets.id
 # FROM products
-# JOIN farmer_products ON products.id = farmer_products.product_id
-# JOIN farmers ON farmer_products.farmer_id = farmers.id
+# JOIN farmers_products ON products.id = farmers_products.product_id
+# JOIN farmers ON farmers_products.farmer_id = farmers.id
 # JOIN farmer_markets ON farmer_markets.farmer_id = farmers.id
 # JOIN markets ON farmer_markets.market_id = markets.id
 # WHERE products.product_name = '';

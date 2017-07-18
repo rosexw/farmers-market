@@ -8,16 +8,12 @@
       <th>Market</th>
     </tr>
   </thead>
-
   <tbody>
-    <% @products.each do |product| %>
-      <% m = Market.find(FarmerMarket.find_by(farmer_id: Farmer.find(FarmersProduct.find_by(product_id: product.id).farmer_id).id).market_id)%>
+    <% @markets.each do |market| %>
       <tr>
-        <td> <%=product.product_name%> </td>
-        <td>
-          <p><%= m.name %></p>
-          <%=link_to 'Click here for More Info', "/markets/#{m.id}"%>
-        </td>
+        <td><%= params[:product].downcase.pluralize %></td>
+        <td><%= market.name %></td>
+        <td><%=link_to "Click here for info", "/markets/#{market.id}" %></td>
       </tr>
     <% end %>
   </tbody>
