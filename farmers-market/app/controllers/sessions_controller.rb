@@ -18,4 +18,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user
+      session[:user_id] = nil
+      redirect_to root_url, notice: 'Logged out!'
+    elsif current_farmer
+      session[:farmer_id] = nil
+      redirect_to root_url, notice: 'Logged out!'
+    end
+  end
+
 end
