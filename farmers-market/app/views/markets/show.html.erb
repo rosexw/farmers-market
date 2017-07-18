@@ -1,5 +1,15 @@
-
+<!DOCTYPE HTML>
 <section>
+
+  <style type="text/css">
+    h4, h5 {
+      margin-left: 10px;
+    }
+    ul, p {
+      margin-left: 50px;
+      padding-left: 0px;
+    }
+  </style>
 
   <h4><%=@market.name %></h4>
 
@@ -10,5 +20,16 @@
   </p>
 
   <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
+  <p><%= @market.days_open %></p>
+  <p><%= @market.time_open %></p>
   <p><%= link_to 'Market Homepage', @market.website_link %></p>
+
+
+  <h5>All products at <%=@market.name%>: </h5>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= product.product_name %></li>
+      <% end %>
+    </ul>
+
 </section>
