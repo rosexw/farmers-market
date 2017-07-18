@@ -23,7 +23,7 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'mini_magick'
 
-# gem 'gmaps4rails'
+gem 'gmaps4rails'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
