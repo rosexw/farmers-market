@@ -11,9 +11,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :markets
-  resources :farmers, only: [:index, :new, :create]
+  resources :farmers, only: [:index, :new, :create, :destroy, :update]
   resources :products
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy, :update]
   resources :users, only: [:new, :create]
   resources :dashboard, only: [:index]
 
