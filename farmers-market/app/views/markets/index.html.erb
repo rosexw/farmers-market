@@ -2,8 +2,13 @@
 
 <%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div class="input-field col s4">
+  <input id="address" type="text" class="validate">
+  <label for="address" data-error="wrong" data-success="right">Address</label>
+</div>
+
+<div class='google_maps_container'>
+  <div id="map" class='google_maps'></div>
 </div>
 
 <script>
