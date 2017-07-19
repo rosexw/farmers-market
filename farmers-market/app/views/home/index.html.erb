@@ -4,12 +4,20 @@
 <div>
   <form action = "/search/" id='home_search' class='row form' method='get'>
     <div class="input-field">
-      <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Search by</a><%= text_field_tag :product, params[:search], :class => 'search_bar'%>
-      <!-- Dropdown Structure -->
+      <div class="input-field col s3">
+        <%= select_tag(:type, options_for_select([['product', 'product'], ['market', 'market']])) %>
+      </div>
+      <%= text_field_tag :param, params[:search], :class => 'search_bar'%>
+
+              <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
          <li><a href="#!">market</a></li>
          <li><a href="#!">product</a></li>
       </ul>
+
+
+
+
     </div>
     <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
 

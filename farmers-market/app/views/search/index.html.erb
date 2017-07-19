@@ -1,20 +1,42 @@
 <h1>SEARCH RESULTS</h1>
 
 
-<table class="responsive-table">
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Market</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @markets.each do |market| %>
+
+<% if params[:type] == 'product'  %>
+  <table class="responsive-table">
+    <thead>
       <tr>
-        <td><%= params[:product].downcase.pluralize %></td>
-        <td><%= market.name %></td>
-        <td><%=link_to "Click here for info", "/markets/#{market.id}" %></td>
+        <th>Product</th>
+        <th>Market</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+        <% @markets.each do |market| %>
+          <tr>
+            <td><%= params[:param].downcase.pluralize %></td>
+            <td><%= market.name %></td>
+            <td><%=link_to "Click here for info", "/markets/#{market.id}" %></td>
+          </tr>
+        <% end %>
+    </tbody>
+  </table>
+<% end %>
+<% if params[:type] == 'market' %>
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Market</th>
+      </tr>
+    </thead>
+      <tbody>
+        <% @markets.each do |market| %>
+          <tr>
+            <td>
+              <%= market.name %>
+              <%=link_to "Click here for info", "/markets/#{market.id}" %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+  </table>
+<% end %>

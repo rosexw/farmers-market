@@ -5,11 +5,17 @@ class SearchController < ApplicationController
     puts 'RESULTS'
 
 
+    if (params[:type] == 'product')
+      @markets = Market.find_markets_by_product_name(params[:param].pluralize.downcase);
+    end
 
-    @markets = Market.find_markets_by_product_name(params[:product].pluralize.downcase);
+    if (params[:type] == 'market')
+      @markets = Market.find_markets_by_name(params[:param])
+    end
 
   end
 end
+
 
 # <% @farmers.each do |farm| %>
 #   <td><%=farm.farm_name%></td>
