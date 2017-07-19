@@ -17,12 +17,18 @@
  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 .nav-wrapper {
-  // background-color: #0769b4;
   background-color: #419B44;
+
+  .brand-logo {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    padding: 0 20px;
+  }
 }
 
 body {
-  // background-color: #f2f0f0;
   background-color: #F5F4E1;
   color: #1e2127;
 }
