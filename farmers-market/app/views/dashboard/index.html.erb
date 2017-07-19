@@ -1,13 +1,24 @@
 <h1>Dashboard</h1>
 
 <% if current_user %>
-  <%= react_component("Profile", {
+  <%= react_component("UserProfile", {
+    type: 'user',
     first_name: current_user.first_name,
     last_name: current_user.last_name,
     email: current_user.email
     }) %>
 <% elsif current_farmer %>
-  hi farmer
+  <%= react_component("FarmerProfile", {
+    type: 'farmer',
+    farm_name: current_farmer.farm_name,
+    first_name: current_farmer.first_name,
+    last_name: current_farmer.last_name,
+    email: current_farmer.email,
+    phone_no: current_farmer.phone_no,
+    website_link: current_farmer.website_link,
+    # image: current_farmer.image, @farmers.image.thumb
+    description: current_farmer.description
+    }) %>
 <% else %>
   not yet
 <% end %>
