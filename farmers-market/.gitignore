@@ -21,3 +21,6 @@
 .byebug_history
 /public/packs
 /node_modules
+
+# Ignore Environment file, see env.example for details
+.env

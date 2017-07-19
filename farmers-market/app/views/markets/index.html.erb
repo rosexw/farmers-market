@@ -12,6 +12,7 @@
     provider: {
       disableDefaultUI: true
       // pass in other Google Maps API options here
+
     },
     internal: {
       id: 'map'
@@ -19,9 +20,12 @@
   },
 
   function(){
+    // console.log ("maps running on index");
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
+    handler.getMap().setZoom(14);
   }
+
   );
 </script>
