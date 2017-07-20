@@ -126,12 +126,10 @@ market420 = Market.create({
   days_open: 'Thursday',
   time_open: '8:00',
   description: Faker::Hipster.paragraph(4),
-  address: '55 John Street',
+  address: '55 John Street, ON, Canada',
   city: 'Toronto',
   province: 'Ontario',
   postal_code: 'M5V 3C6',
-  lat: '43.64634718911435',
-  long: '-79.38721776008606',
   website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
   image: open_asset('market1.jpeg')
   })
@@ -142,12 +140,10 @@ market421 = Market.create({
   days_open: 'Wednesday',
   time_open: '6:30',
   description: Faker::Hipster.paragraph(4),
-  address: '100 Queen Street West',
+  address: '100 Queen Street West, ON, Canada',
   city: 'Toronto',
   province: 'Ontario',
   postal_code: 'M5H 2N2',
-  lat: '43.65175812834499',
-  long: '-79.38521146774292',
   website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
   image: open_asset('market2.jpeg')
   })
@@ -158,19 +154,18 @@ market422 = Market.create({
   days_open: 'Tuesday',
   time_open: '9:00',
   description: Faker::Hipster.paragraph(4),
-  address: '555 University Avenue',
+  address: '555 University Avenue, ON, Canada',
   city: 'Toronto',
   province: 'Ontario',
   postal_code: 'M5G 1X8',
-  lat: '43.65730635785469',
-  long: '-79.38742697238922',
   website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
   image: open_asset('market3.jpeg')
   })
 
   market423 = Market.create({
     id: 423,
-    name: 'John Street Farmers Market',
+    name: 'Evergreen Brick Works Farmers’ Market',
+    address: 'Evergreen Brick Works, ON, Canada',
     days_open: 'Wednesday',
     time_open: '3:30',
     description: Faker::Hipster.paragraph(4),
@@ -186,12 +181,10 @@ market422 = Market.create({
       days_open: 'Sunday',
       time_open: '9:00',
       description: Faker::Hipster.paragraph(4),
-      address: '20 Woodward Avenue',
+      address: '20 Woodward Avenue, ON, Canada',
       city: 'Toronto',
       province: 'Ontario',
       postal_code: 'M4L 1A7',
-      lat: '43.65730635785469',
-      long: '-79.38742697238922',
       website_link: 'http://www.leslievillemarket.com/',
       image: open_asset('market3.jpeg')
       })

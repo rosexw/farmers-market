@@ -1,11 +1,26 @@
 class MarketsController < ApplicationController
 
   def index
-    @market = Market.all
-    @hash = Gmaps4rails.build_markers(@market) do |market, marker|
-      marker.lat market.lat
-      marker.lng market.long
-      marker.infowindow market.description
+    if params[:param]
+      @market = Market.find_markets_around_me(params[:param], 10)
+      @hash = Gmaps4rails.build_markers(@market) do |market, marker|
+        marker.lat market.lat
+        marker.lng market.long
+        marker.infowindow market.description
+      end
+    else
+      @market = Market.all
+      @hash = Gmaps4rails.build_markers(@market) do |market, marker|
+        marker.lat market.lat
+        marker.lng market.long
+        marker.infowindow market.description
+    end
+  end
+
+    puts "ALL MARKETS RIGHT NOW"
+    @market.each do |m|
+      puts "///////"
+      puts m.inspect
     end
 
   end

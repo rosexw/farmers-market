@@ -1,16 +1,27 @@
-<h1>All Markets</h1>
+<% if params[:param] %>
+  <h1>Markets near <%= params[:param]%></h1>
 
-<%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
+  <div class='google_maps_container'>
+    <div id="map" class='google_maps'></div>
+  </div>
+<% else %>
 
-<div class="input-field col s4">
-  <input id="address" type="text" class="validate">
-  <label for="address" data-error="wrong" data-success="right">Address</label>
-</div>
-
-<div class='google_maps_container'>
-  <div id="map" class='google_maps'></div>
-</div>
-
+  <h1>All Markets</h1>
+<% end %>
+<% if params[:param] %>
+  <%= react_component("Markets", {markets: @market})%>
+<% else %>
+  <%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
+<% end %>
+  <form action = "/markets/" id='home_search' class='row form' method='get'>
+    <div class="input-field col s3">
+      <%= text_field_tag :param, params[:search], :class => 'search_bar'%>
+      <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
+    </div>
+  </form>
+  <div class='google_maps_container'>
+    <div id="map" class='google_maps'></div>
+  </div>
 <script>
   handler = Gmaps.build('Google');
   handler.buildMap({
@@ -29,7 +40,7 @@
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    handler.getMap().setZoom(14);
+    handler.getMap().setZoom(10);
   }
 
   );
