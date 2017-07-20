@@ -14,38 +14,37 @@
   <p><%= @market.time_open %></p>
   <p><%= link_to 'Market Homepage', @market.website_link %></p>
 
-
   <h5>All products at <%=@market.name%>: </h5>
-    <ul>
-      <% @products.each do |product| %>
-        <li><%= product.product_name %></li>
-      <% end %>
-    </ul>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= product.product_name %></li>
+    <% end %>
+  </ul>
 
-    <div style='width: 400px;'>
-      <div id="map" style='width: 400px; height: 300px;'></div>
-    </div>
+  <div style='width: 400px;'>
+    <div id="map" style='width: 400px; height: 300px;'></div>
+  </div>
 
-    <script>
-      handler = Gmaps.build('Google');
-      handler.buildMap({
-        provider: {
-          disableDefaultUI: true,
-          // pass in other Google Maps API options here
-        },
-        internal: {
-          id: 'map'
-        }
+  <script>
+    handler = Gmaps.build('Google');
+    handler.buildMap({
+      provider: {
+        disableDefaultUI: true,
+        // pass in other Google Maps API options here
       },
-
-      function(){
-        // console.log("map running for farmer show")
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-          handler.getMap().setZoom(16)
+      internal: {
+        id: 'map'
       }
-      );
-    </script>
+    },
+
+    function(){
+      // console.log("map running for farmer show")
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        handler.getMap().setZoom(16)
+    }
+    );
+  </script>
 
 </section>
