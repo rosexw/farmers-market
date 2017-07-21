@@ -1,6 +1,6 @@
 class FarmerProfile extends React.Component {
 
-  handleClick(e) {
+  handleClickAddProduct(e) {
     e.preventDefault();
     window.location.href = '/products/new';
     console.log('The link was clicked');
@@ -16,7 +16,7 @@ class FarmerProfile extends React.Component {
       <div className="field"> Website_Link: {this.props.website_link} </div>
       <div className="field"> Description: {this.props.description} </div>
       <div><img src={this.props.image}/></div>
-      <button onClick={this.handleClick}>Add Product</button>
+      <button onClick={this.handleClickAddProduct}>Add Product</button>
     </div>);
   }
 }
