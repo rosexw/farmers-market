@@ -8,7 +8,12 @@
           <%= image_tag @market.image.thumb, alt: @market.name %>
       <% end %>
     </p>
-
+    <div class="right-section">
+      <div style='width: 400px;'>
+        <div id="map" style='width: 400px; height: 300px;'></div>
+      </div>
+    </div>
+    
     <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
     <p><%= @market.days_open %></p>
     <p><%= @market.time_open %></p>
@@ -19,6 +24,7 @@
         <li><%= product.product_name %></li>
       <% end %>
     </ul>
+
     <h5>All Farmers at <%=@market.name%>: </h5>
 
     <div>
@@ -34,11 +40,6 @@
         </p>
         <hr>
       <% end %>
-    </div>
-  </div>
-  <div class="right-section">
-    <div style='width: 400px;'>
-      <div id="map" style='width: 400px; height: 300px;'></div>
     </div>
   </div>
 </section>
