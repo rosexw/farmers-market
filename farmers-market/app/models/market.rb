@@ -1,6 +1,7 @@
 class Market < ApplicationRecord
   mount_uploader :image, MarketImageUploader
   has_many :farmer_markets
+  has_many :farmers, through: :farmer_markets
   geocoded_by :address, :latitude  => :lat, :longitude => :long
 
   geocoded_by "#{:address}"
