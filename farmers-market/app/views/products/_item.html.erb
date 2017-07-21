@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <b><%= farmer_product.product.product_name %></b>
+  </td>
+  <td>
+    <%= farmer_product.product.product_type %>
+  </td>
+  <td>
+    <%= farmer_product.product.organic %>
+  </td>
+  <td>
+    <%= farmer_product.product.non_gmo %>
+  </td>
+  <td>
+    <%= farmer_product.product.on_hand %>
+  </td>
+  <td>
+    <%= link_to "delete", farmer_product.product, method: :delete %>
+  </td>
+</tr>
