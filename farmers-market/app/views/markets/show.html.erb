@@ -19,33 +19,49 @@
         <li><%= product.product_name %></li>
       <% end %>
     </ul>
+    <h5>All Farmers at <%=@market.name%>: </h5>
+
+    <div>
+      <hr>
+      <% @market.farmers.each do |f| %>
+      <h6>Name:</h6>
+        <p>
+        <%= f.first_name%> <%= f.last_name %>
+        </p>
+        <h6>Farm name:</h6>
+        <p>
+        <%= f.farm_name %>
+        </p>
+        <hr>
+      <% end %>
+    </div>
   </div>
   <div class="right-section">
     <div style='width: 400px;'>
       <div id="map" style='width: 400px; height: 300px;'></div>
     </div>
   </div>
+</section>
 
   <script>
-    handler = Gmaps.build('Google');
-    handler.buildMap({
-      provider: {
-        disableDefaultUI: true,
-        // pass in other Google Maps API options here
+      handler = Gmaps.build('Google');
+      handler.buildMap({
+        provider: {
+          disableDefaultUI: true,
+          // pass in other Google Maps API options here
+        },
+        internal: {
+          id: 'map'
+        }
       },
-      internal: {
-        id: 'map'
+      function(){
+        // console.log("map running for farmer show")
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+          handler.getMap().setZoom(16)
       }
-    },
-
-    function(){
-      // console.log("map running for farmer show")
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        handler.getMap().setZoom(16)
-    }
-    );
-  </script>
+      );
+    </script>
 
 </section>
