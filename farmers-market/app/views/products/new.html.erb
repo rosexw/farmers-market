@@ -6,13 +6,27 @@
       <%= f.label :product_name %><br />
       <%= f.text_field :product_name %>
     </div>
+
     <div class="field">
+      <%= f.label :product_type %><br />
+      <%= f.text_field :product_type %>
+    </div>
+
+    <div class="field">
+      <%= f.check_box(:organic) %>
       <%= f.label :organic %><br />
-      <%= f.text_field :organic %>
     </div>
+
     <div class="field">
+      <%= f.check_box(:non_gmo) %>
       <%= f.label :non_gmo %><br />
-      <%= f.text_field :non_gmo %>
     </div>
+
+    <div class="field">
+      <%= f.check_box(:on_hand) %>
+      <%= f.label :on_hand %><br />
+    </div>
+
+
     <div class="action"><%= f.submit "Submit" %></div>
   <% end %>

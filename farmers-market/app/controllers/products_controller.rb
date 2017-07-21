@@ -25,8 +25,10 @@ class ProductsController < ApplicationController
   def allowed_params
     params.require(:product).permit(
     :product_name,
+    :product_type,
+    :on_hand,
     :organic,
-    :non_gmo
+    :non_gmo,
     )
   end
 
