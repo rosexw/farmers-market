@@ -1,0 +1,32 @@
+<h1>Add Product</h1>
+
+<%= form_for Product.new do |f| %>
+
+    <div class="field">
+      <%= f.label :product_name %><br />
+      <%= f.text_field :product_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :product_type %><br />
+      <%= f.text_field :product_type %>
+    </div>
+
+    <div class="field">
+      <%= f.check_box(:organic) %>
+      <%= f.label :organic %><br />
+    </div>
+
+    <div class="field">
+      <%= f.check_box(:non_gmo) %>
+      <%= f.label :non_gmo %><br />
+    </div>
+
+    <div class="field">
+      <%= f.check_box(:on_hand) %>
+      <%= f.label :on_hand %><br />
+    </div>
+
+
+    <div class="action"><%= f.submit "Submit" %></div>
+  <% end %>

@@ -25,11 +25,6 @@ class FarmersController < ApplicationController
     end
   end
 
-  def show
-    @farmer = Farmer.find params[:id]
-    puts @farmer.inspect
-  end
-
   private
 
   def allowed_params
