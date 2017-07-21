@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :markets
   resources :farmers, only: [:index, :new, :create, :destroy, :update]
-  resources :products, only: [:new, :create]
+  resources :products, only: [:new, :create, :destroy]
   resources :sessions, only: [:new, :create, :destroy, :update]
   resources :users, only: [:new, :create]
   resources :dashboard, only: [:index]

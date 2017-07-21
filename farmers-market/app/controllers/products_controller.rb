@@ -26,6 +26,15 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    @product = Product.find params[:id]
+    @product.destroy
+    respond_to do |format|
+      format.html { redirect_to dashboard_index_path, notice: 'Product was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
   def allowed_params
     params.require(:product).permit(
     :product_name,
