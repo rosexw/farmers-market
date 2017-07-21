@@ -19,6 +19,16 @@
     description: current_farmer.description,
     image: "#{current_farmer.image}"
     }) %>
+
+    <h5>Markets you're participating in: </h5>
+    <div>
+      <% @market.where(id: current_farmer.id).find_each do |m|  %>
+       <ul>
+        <li><%= link_to "#{m.name}", "/markets/#{m.id}" %></li>
+      </ul>
+      <% end %>
+    </div>
+
 <% else %>
   not yet
 <% end %>
