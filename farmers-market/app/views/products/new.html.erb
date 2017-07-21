@@ -1,0 +1,18 @@
+<h1>Add Product</h1>
+
+<%= form_for Product.new do |f| %>
+
+    <div class="field">
+      <%= f.label :product_name %><br />
+      <%= f.text_field :product_name %>
+    </div>
+    <div class="field">
+      <%= f.label :organic %><br />
+      <%= f.text_field :organic %>
+    </div>
+    <div class="field">
+      <%= f.label :non_gmo %><br />
+      <%= f.text_field :non_gmo %>
+    </div>
+    <div class="action"><%= f.submit "Submit" %></div>
+  <% end %>
