@@ -1,28 +1,29 @@
 <!DOCTYPE HTML>
-<section>
+<section class="show-market-layout">
+  <div class="left-section">
+    <h4><%=@market.name %></h4>
 
-  <h4><%=@market.name %></h4>
+    <p>
+      <%= link_to @market.website_link do %>
+          <%= image_tag @market.image.thumb, alt: @market.name %>
+      <% end %>
+    </p>
 
-  <p>
-    <%= link_to @market.website_link do %>
-        <%= image_tag @market.image.thumb, alt: @market.name %>
-    <% end %>
-  </p>
-
-  <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
-  <p><%= @market.days_open %></p>
-  <p><%= @market.time_open %></p>
-  <p><%= link_to 'Market Homepage', @market.website_link %></p>
-
-  <h5>All products at <%=@market.name%>: </h5>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= product.product_name %></li>
-    <% end %>
-  </ul>
-
-  <div style='width: 400px;'>
-    <div id="map" style='width: 400px; height: 300px;'></div>
+    <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
+    <p><%= @market.days_open %></p>
+    <p><%= @market.time_open %></p>
+    <p><%= link_to 'Market Homepage', @market.website_link %></p>
+    <h5>All products at <%=@market.name%>: </h5>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= product.product_name %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="right-section">
+    <div style='width: 400px;'>
+      <div id="map" style='width: 400px; height: 300px;'></div>
+    </div>
   </div>
 
   <script>

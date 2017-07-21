@@ -14,10 +14,16 @@
 
 }
 
-h4, h5 {
-  margin-left: 20px;
-}
-ul, p {
-  margin-left: 50px;
-  padding-left: 0px;
+.show-market-layout {
+  display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .left-section {
+    width: 50%;
+  }
+  .right-section {
+    padding-top: 20px;
+    width: 50%;
+  }
 }
