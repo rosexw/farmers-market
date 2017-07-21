@@ -1,8 +1,27 @@
-<h1>Product Details</h1>
+<h3>Product Details</h3>
 
-<section>
+  <section class="">
 
-  <h4><%=@product.product_name %></h4>
-
-  <p><%= @product.product_name %> <%= @product.organic %>, <%= @product.non_gmo %></p>
-</section>
+    <div class="">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Type</th>
+            <th>Organic</th>
+            <th>Non-GMO</th>
+            <th>On-Hand</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><b><%= @product.product_name %></b></td>
+          <td><%= @product.product_type %></td>
+          <td><%= @product.organic %></td>
+          <td><%= @product.non_gmo %></td>
+          <td><%= @product.on_hand %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>

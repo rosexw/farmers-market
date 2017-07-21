@@ -1,1 +1,25 @@
-<h1>Farmers/:id/Products</h1>
+<h3><%= current_farmer.farm_name %> Products</h3>
+
+<section class="">
+
+  <div class="">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th>Products</th>
+          <th>Type</th>
+          <th>Organic</th>
+          <th>Non-GMO</th>
+          <th>On-Hand</th>
+          </thead>
+          <tbody>
+            <% @farmer_products.each do |farmer_product| %>
+            <%= render 'item', farmer_product: farmer_product %>
+            <% end %>
+          </tbody>
+        </tr>
+
+    </table>
+  </div>
+
+</section>
