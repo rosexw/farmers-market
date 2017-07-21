@@ -1,0 +1,7 @@
+<% if current_user && current_user.id == params[:id].to_i %>
+  <h1>Delete Current User <%=current_user.first_name%> </h1>
+<% elsif current_farmer &&current_farmer.id == params[:id].to_i %>
+ <h1>Delete Current Farmer <%=current_farmer.first_name%> </h1>
+<% else %>
+  <h1>NOT ALLOWED</h1>
+<% end %>
