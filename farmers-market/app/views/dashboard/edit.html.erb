@@ -1,0 +1,34 @@
+<% if current_user &&current_user.id == params[:id].to_i %>
+ <h1>Edit Current User <%=current_user.first_name%> </h1>
+ <%= form_for(@user, :url => { :action => "update", :method => 'put'}) do |f| %>
+   <div class="field">
+     <%= f.label :first_name, "First Name" %><br />
+     <%= f.text_field :first_name  %>
+   </div>
+   <div class="field">
+     <%= f.label :last_name, "Last Name"%><br />
+     <%= f.text_field :last_name  %>
+   </div>
+   <div class="field">
+     <%= f.label :email, "E-mail" %><br />
+     <%= f.text_field :email %>
+   </div>
+   <!-- <div class="field">
+     <%= f.label :password, "Password" %><br />
+     <%= f.password_field :password, :autocomplete => "off"  %>
+   </div>
+   <div class="field">
+     <%= f.label :password_confirmation %><br />
+     <%= f.password_field :password_confirmation, :autocomplete => "off" %>
+   </div> -->
+   <div class="action_container">
+     <%= f.submit %>
+   </div>
+ <% end %>
+
+<% elsif current_farmer && current_farmer.id == params[:id].to_i %>
+  <h1>Edit Current Farmer <%=current_farmer.first_name%> </h1>
+
+<% else %>
+  <h1>NOT ALLOWED</h1>
+<% end %>
