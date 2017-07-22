@@ -10,6 +10,7 @@
 <% elsif current_farmer %>
   <%= react_component("FarmerProfile", {
     type: 'farmer',
+    id: current_farmer.id,
     farm_name: current_farmer.farm_name,
     first_name: current_farmer.first_name,
     last_name: current_farmer.last_name,

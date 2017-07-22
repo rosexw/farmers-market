@@ -6,6 +6,13 @@ class FarmerProfile extends React.Component {
     console.log('The link was clicked');
   }
 
+  handleClickViewProduct(e) {
+  const url = '/farmers/' + this.props.id + '/products'
+  e.preventDefault();
+  window.location.href = url;
+  console.log('The link was clicked');
+  }
+
   render() {
     return (<div>
       <div className="field"> Farm Name: {this.props.farm_name} </div>
@@ -17,6 +24,7 @@ class FarmerProfile extends React.Component {
       <div className="field"> Description: {this.props.description} </div>
       <div><img src={this.props.image}/></div>
       <button onClick={this.handleClickAddProduct}>Add Product</button>
+      <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
     </div>);
   }
 }
