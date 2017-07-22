@@ -1,6 +1,5 @@
 class FarmersController < ApplicationController
   def index
-
   end
 
   def new
@@ -23,6 +22,16 @@ class FarmersController < ApplicationController
       else
         render :new
       end
+    end
+  end
+
+  def destroy
+    @farmer = Farmer.find params[:id]
+    @farmer.destroy
+    session[:farmer_id] = nil
+    respond_to do |format|
+      format.html { redirect_to home_index_path, notice: 'Profile was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

@@ -21,6 +21,8 @@
     image: "#{current_farmer.image}"
     }) %>
 
+<%= link_to "delete", current_farmer, method: :delete %>
+
     <h5>Markets you're participating in: </h5>
     <div>
       <% @market.where(id: current_farmer.id).find_each do |m|  %>
