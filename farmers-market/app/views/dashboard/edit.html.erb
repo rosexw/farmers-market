@@ -28,7 +28,39 @@
 
 <% elsif current_farmer && current_farmer.id == params[:id].to_i %>
   <h1>Edit Current Farmer <%=current_farmer.first_name%> </h1>
-
+  <%= form_for(@farmer, :url => { :action => "update", :method => 'put'}) do |f| %>
+    <div class="field">
+      <%= f.label :farm_name, "Farm Name:" %><br />
+      <%= f.text_field :farm_name  %>
+    </div>
+    <div class="field">
+      <%= f.label :first_name, "First Name:" %><br />
+      <%= f.text_field :first_name  %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name, "Last Name:"%><br />
+      <%= f.text_field :last_name  %>
+    </div>
+    <div class="field">
+      <%= f.label :email, "E-mail:" %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :phone_no, "Phone No:"%><br />
+      <%= f.text_field :phone_no  %>
+    </div>
+    <div class="field">
+      <%= f.label :website_link, "website_link" %><br />
+      <%= f.text_field :website_link %>
+    </div>
+    <div class="field">
+      <%= f.label :description, "website_link" %><br />
+      <%= f.text_field :description %>
+    </div>
+    <div class="action_container">
+      <%= f.submit %>
+    </div>
+  <% end %>
 <% else %>
   <h1>NOT ALLOWED</h1>
 <% end %>

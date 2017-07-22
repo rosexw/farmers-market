@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
 
   def edit
     @user = current_user
+    @farmer = current_farmer
   end
 
   def new
@@ -22,7 +23,17 @@ class DashboardController < ApplicationController
 
       redirect_to '/dashboard'
     else current_farmer
-      farmer = Farmer.find(current_user.id)
+      farmer = Farmer.find(current_farmer.id)
+      farmer.update(farm_name: params[:farmer][:farm_name])
+      farmer.update(first_name: params[:farmer][:first_name])
+      farmer.update(last_name: params[:farmer][:last_name])
+      farmer.update(email: params[:farmer][:email])
+      farmer.update(phone_no: params[:farmer][:phone_no])
+      farmer.update(website_link: params[:farmer][:website_link])
+      farmer.update(description: params[:farmer][:description])
+      farmer.update(image: params[:farmer][:image])
+
+      redirect_to '/dashboard'
     end
   end
 

@@ -22,8 +22,8 @@
     description: current_farmer.description,
     image: "#{current_farmer.image}"
     }) %>
-
-<%= link_to "delete", current_farmer, method: :delete %>
+    <%= link_to "Edit", "/dashboard/#{current_farmer.id}/edit"%>
+    <%= link_to "Delete", "/farmers/#{current_farmer.id}", method: :delete%>
 
     <h5>Markets you're participating in: </h5>
     <div>
