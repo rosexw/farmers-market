@@ -13,21 +13,21 @@ class DashboardController < ApplicationController
   end
 
   def update
+    puts "I'm here dashboard_controller"
     if current_user
-      @user = User.find(current_user.id)
+      user = User.find(current_user.id)
+      user.update(first_name: params[:user][:first_name])
+      user.update(last_name: params[:user][:last_name])
+      user.update(email: params[:user][:email])
+
+      redirect_to '/dashboard'
     else current_farmer
-      @farmer = Farmer.find(current_user.id)
+      farmer = Farmer.find(current_user.id)
+    end
   end
 
   def delete_user
 
   end
 
-# private
-
-  def user_params
-      # NOTE: Using `strong_parameters` gem
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
-  end
 end

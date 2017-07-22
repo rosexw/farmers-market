@@ -15,11 +15,7 @@ Rails.application.routes.draw do
   resources :products, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy, :update]
   resources :users, only: [:new, :create]
-  resources :dashboard, only: [:index, :edit, :delete] do
-      collection do
-        patch 'update'
-    end
-  end
+  resources :dashboard, only: [:index, :edit, :delete, :update]
 
   resources :search
 
