@@ -287,7 +287,6 @@ market422 = Market.create({
 
       puts "Creating Connnections ..."
 
-byebug
       frm1 = Farmer.find(420)
       frm2 = Farmer.find(421)
       frm3 = Farmer.find(422)
