@@ -165,12 +165,13 @@ market422 = Market.create({
   market423 = Market.create({
     id: 423,
     name: 'Evergreen Brick Works Farmers’ Market',
-    address: 'Evergreen Brick Works, ON, Canada',
     days_open: 'Wednesday',
     time_open: '3:30',
     description: Faker::Hipster.paragraph(4),
+    address: '550 Bayview Avenue',
     city: 'Toronto',
     province: 'Ontario',
+    postal_code: 'M4W 3X8',
     website_link: 'http://johnstreetmarket.ca/',
     image: open_asset('market3.jpeg')
     })

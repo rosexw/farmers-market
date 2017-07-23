@@ -34,4 +34,33 @@ class MarketsController < ApplicationController
     end
   end
 
+  def create
+    @market = Market.find_or_initialize_by(allowed_params)
+    @market.save
+    if @market.save
+      x = FarmerMarket.new
+      x.farmer_id = current_farmer.id
+      x.market_id = @market.id
+      x.save
+      redirect_to root_url, notice: 'Thank you for adding a market!'
+    else
+      render :new
+    end
+  end
+
+  def allowed_params
+    params.require(:market).permit(
+    :name,
+    :website_link,
+    :image,
+    :address,
+    :city,
+    :province,
+    :postal_code,
+    :description,
+    :time_open,
+    :days_open
+    )
+  end
+
 end
