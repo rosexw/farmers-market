@@ -2,6 +2,8 @@ class DashboardController < ApplicationController
   def index
     @market = Market.all
     @farmer = Farmer.all
+    @farmer_markets = FarmerMarket.farmer_markets(params[:farmer_id])
+    @farmer_products = FarmersProduct.farmer_products(params[:farmer_id])
   end
 
   def edit

@@ -27,11 +27,54 @@
 
     <h5>Markets you're participating in: </h5>
     <div>
-      <% @market.where(id: current_farmer.id).find_each do |m|  %>
-       <ul>
-        <li><%= link_to "#{m.name}", "/markets/#{m.id}" %></li>
-      </ul>
-      <% end %>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Website_link</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Postal_code</th>
+            <th>Description</th>
+            <th>Time_open</th>
+            <th>Days_open</th>
+        </thead>
+            <tbody>
+              <% @farmer_markets.each do |farmer_market| %>
+              <%= render 'all', farmer_market: farmer_market %>
+              <% end %>
+            </tbody>
+          </tr>
+
+
+          <% @market.where(id: current_farmer.id).find_each do |m|  %>
+           <ul>
+            <li><%= link_to "#{m.name}", "/markets/#{m.id}" %></li>
+          </ul>
+          <% end %>
+
+
+      </table>
+    </div>
+    <div class="">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Products</th>
+            <th>Type</th>
+            <th>Organic</th>
+            <th>Non-GMO</th>
+            <th>On-Hand</th>
+            </thead>
+            <tbody>
+              <% @farmer_products.each do |farmer_product| %>
+              <%= render 'item', farmer_product: farmer_product %>
+              <% end %>
+            </tbody>
+          </tr>
+
+      </table>
     </div>
 
 <% else %>
