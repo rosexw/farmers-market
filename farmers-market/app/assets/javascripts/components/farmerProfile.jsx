@@ -41,16 +41,6 @@ class FarmerProfile extends React.Component {
       <button onClick={this.handleClickAddProduct}>Add Product</button>
       <button onClick={this.handleClickAddMarket}>Add Market</button>
       <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
-
-      <h5>Markets you're participating in: </h5>
-      <div>
-        <table class="responsive-table">
-
-
-
-        </table>
-      </div>
-
     </div>);
   }
 }
