@@ -22,12 +22,10 @@
     phone_no: current_farmer.phone_no,
     website_link: current_farmer.website_link,
     description: current_farmer.description,
-    image: "#{current_farmer.image}",
-    farm_name: current_farmer.farm_name
+    image: "#{current_farmer.image}"
     }) %>
 
     <%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(current_farmer.id)})%>
-    <%= react_component("Products", {products: Product.order(created_at: :desc)}) %>
 
 <% else %>
   not yet
