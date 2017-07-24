@@ -18,4 +18,5 @@
 //= require components
 //= require underscore
 //= require gmaps/google
+//= require jquery.vide
 //= require_tree .

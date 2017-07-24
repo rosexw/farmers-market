@@ -1,6 +1,13 @@
+<div class="fullscreen">
+  <%= vider_tag 'video/clips_final', position: '100% 100%' %>
+</div>
+
+
+<div class="search-border">
 <div>
   <h4 class='center-align'>Connecting farmers to you</h4>
 </div>
+
 <div>
   <form action = "/search/" id='home_search' class='row form' method='get'>
     <div class="input-field">
@@ -16,14 +23,17 @@
       </ul>
     </div>
     <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
-
   </form>
+</div>
+<div class='row'>
+  <a href='/markets'>View all Markets</a>
+</div>
 </div>
 
 <!-- <%= form_tag '/search/', :method =>'get', :encoding =>  nil do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search", :name => nil %> -->
-
+<!--
 <% end %>
 <div class="row">
   <form class="col s12">
@@ -33,7 +43,7 @@
         <label for="postal_code" data-error="wrong" data-success="right">Postal Code</label>
       </div>
       <a class='dropdown-button btn' href='#' data-activates='dropdown2'>day</a>
-      <!-- Dropdown Structure -->
+      Dropdown Structure
       <ul id='dropdown2' class='dropdown-content'>
          <li><a href="#!">Monday</a></li>
          <li><a href="#!">Tuesday</a></li>
@@ -46,7 +56,4 @@
     </div>
   </form>
 </div>
-
-<div class='row'>
-  <a href='/markets'>View all Markets</a>
-</div>
+ -->

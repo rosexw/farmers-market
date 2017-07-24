@@ -11,7 +11,7 @@
 }
 
 .search_bar {
-  width: 1000px
+  width: 1%;
 }
 
 form {
@@ -29,4 +29,27 @@ form {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+#vider-element {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  object-fit: fill;
+  overflow: hidden;
+}
+
+.search-border {
+  background-color: white;
+  margin: auto;
+  margin-top:10%;
+  width: 40%;
+  padding: 8em;
+  opacity: 0.9;
 }
