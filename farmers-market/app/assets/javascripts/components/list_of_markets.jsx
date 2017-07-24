@@ -6,7 +6,7 @@ class Markets extends React.Component {
   </div>
   );
    return (
-     <div>{listMarkets}</div>
+     <div>Markets:{listMarkets}</div>
    );
   }
 
