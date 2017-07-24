@@ -8,22 +8,97 @@
 
   .google_maps {
     width: 100%;
-    height: 400px;
+    height: 100%;
+    max-width: 400px;
     float: right;
   }
 
 }
 
-.show-market-layout {
+.show-market-title {
+  a {
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    height: 150px;
+    width: 150px;
+    min-width: 150px;
+
+    @media (max-width:500px) {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+    }
+  }
+
+  h3 {
+    padding-left: 30px;
+
+    @media (max-width:500px) {
+      padding-left: 10px;
+      font-size: 20px;
+    }
+  }
+
   display: flex;
+  align-items: center;
+}
+
+.show-market-section {
+  padding: 20px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+
+  ul:not(.browser-default) li {
+    list-style-type: circle;
+    margin-left: 30px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.show-market-two-columns-responsive {
+  display: flex;
+
   @media (max-width: 800px) {
     flex-direction: column;
   }
   .left-section {
     width: 50%;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
   .right-section {
     padding-top: 20px;
     width: 50%;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
+}
+
+.farm-list-items {
+  display: flex;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .left-section {
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  .right-section {
+    padding-left: 20px;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
+#map {
+  height: 300px;
 }

@@ -22,6 +22,5 @@ class Market < ApplicationRecord
 
   def self.find_markets_by_name(market_name)
     Market.where('name LIKE ?', "%#{market_name.capitalize}%")
-
   end
 end
