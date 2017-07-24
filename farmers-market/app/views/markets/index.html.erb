@@ -1,29 +1,29 @@
 <!-- For all Markets -->
 
 <% if params[:param] %>
-  <h1>Markets near <%= params[:param]%></h1>
-
-  <div class='google_maps_container'>
-    <div id="map" class='google_maps'></div>
-  </div>
+  <h3 class='center-align'>Markets near <%= params[:param]%></h3>
 <% else %>
-
-  <h1>All Markets</h1>
+  <h3 class='center-align'>All Markets</h3>
 <% end %>
-<% if params[:param] %>
-  <%= react_component("Markets", {markets: @market})%>
-<% else %>
-  <%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
-<% end %>
-  <form action = "/markets/" id='home_search' class='row form' method='get'>
+    <form action = "/markets/" id='home_search' class='row form' method='get'>
     <div class="input-field col s3">
       <%= text_field_tag :param, params[:search], :class => 'search_bar'%>
       <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
     </div>
   </form>
-  <div class='google_maps_container'>
-    <div id="map" class='google_maps'></div>
+  <div class="show-market-section show-market-two-columns-responsive">
+    <div class="left-section">
+      <% if params[:param] %>
+        <%= react_component("Markets", {markets: @market})%>
+      <% else %>
+        <%= react_component("Markets", {markets: Market.order(created_at: :desc)}) %>
+      <% end %>
+    </div>
+    <div class="right-section">
+      <div id="map"></div>
+    </div>
   </div>
+
 <script>
   handler = Gmaps.build('Google');
   handler.buildMap({
