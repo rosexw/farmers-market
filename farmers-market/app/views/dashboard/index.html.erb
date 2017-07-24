@@ -10,6 +10,8 @@
     <%= link_to "Edit", "/dashboard/#{current_user.id}/edit"%>
     <%= link_to "Delete", "/users/#{current_user.id}", method: :delete%>
 <% elsif current_farmer %>
+  <%= link_to "Edit", "/dashboard/#{current_farmer.id}/edit"%>
+  <%= link_to "Delete", "/farmers/#{current_farmer.id}", method: :delete%>
   <%= react_component("FarmerProfile", {
     type: 'farmer',
     id: current_farmer.id,
@@ -20,62 +22,12 @@
     phone_no: current_farmer.phone_no,
     website_link: current_farmer.website_link,
     description: current_farmer.description,
-    image: "#{current_farmer.image}"
+    image: "#{current_farmer.image}",
+    farm_name: current_farmer.farm_name
     }) %>
-    <%= link_to "Edit", "/dashboard/#{current_farmer.id}/edit"%>
-    <%= link_to "Delete", "/farmers/#{current_farmer.id}", method: :delete%>
 
-    <h5>Markets you're participating in: </h5>
-    <div>
-      <table class="responsive-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Website_link</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Province</th>
-            <th>Postal_code</th>
-            <th>Description</th>
-            <th>Time_open</th>
-            <th>Days_open</th>
-        </thead>
-            <tbody>
-              <% @farmer_markets.each do |farmer_market| %>
-              <%= render 'all', farmer_market: farmer_market %>
-              <% end %>
-            </tbody>
-          </tr>
-
-
-          <% @market.where(id: current_farmer.id).find_each do |m|  %>
-           <ul>
-            <li><%= link_to "#{m.name}", "/markets/#{m.id}" %></li>
-          </ul>
-          <% end %>
-
-
-      </table>
-    </div>
-    <div class="">
-      <table class="responsive-table">
-        <thead>
-          <tr>
-            <th>Products</th>
-            <th>Type</th>
-            <th>Organic</th>
-            <th>Non-GMO</th>
-            <th>On-Hand</th>
-            </thead>
-            <tbody>
-              <% @farmer_products.each do |farmer_product| %>
-              <%= render 'item', farmer_product: farmer_product %>
-              <% end %>
-            </tbody>
-          </tr>
-
-      </table>
-    </div>
+    <%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(current_farmer.id)})%>
+    <%= react_component("Products", {products: Product.order(created_at: :desc)}) %>
 
 <% else %>
   not yet

@@ -19,6 +19,13 @@ class FarmerProfile extends React.Component {
   console.log('The link was clicked');
   }
 
+  handleClickViewMarket(e) {
+  const url = '/farmers/' + this.props.id + '/markets'
+  e.preventDefault();
+  window.location.href = url;
+  console.log('View Markets');
+  }
+
   render() {
     return (<div>
       <div className="field"> Farm Name: {this.props.farm_name} </div>
@@ -32,6 +39,17 @@ class FarmerProfile extends React.Component {
       <button onClick={this.handleClickAddProduct}>Add Product</button>
       <button onClick={this.handleClickAddMarket}>Add Market</button>
       <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
+      <button onClick={this.handleClickViewMarket.bind(this)}>View Markets</button>
+
+      <h5>Markets you're participating in: </h5>
+      <div>
+        <table class="responsive-table">
+
+
+
+        </table>
+      </div>
+
     </div>);
   }
 }
