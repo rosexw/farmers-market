@@ -44,10 +44,10 @@ farmer421 = Farmer.create({
   email: 'farmer2@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'farmer-5194693636',
-  phone_no: 5534,
-  website_link: 'http://www.fakefarmer.com',
+  first_name: 'Rob',
+  last_name: 'Thames',
+  phone_no: 5194693636,
+  website_link: 'http://www.thamesrivermelons.com/',
   image: open_asset('farmer1.jpeg')
 })
 
@@ -57,9 +57,9 @@ farmer422 = Farmer.create({
   email: 'farmer3@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'name-9054733401',
-  phone_no: 2363,
+  first_name: 'Honey',
+  last_name: 'Staites',
+  phone_no: 9054733401,
   website_link: 'http://www.staites-honey.com',
   image: open_asset('farmer2.jpeg')
 })
@@ -70,36 +70,36 @@ farmer423 = Farmer.create({
   email: 'farmer4@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'farmer',
-  phone_no: 5555,
-  website_link: 'http://www.fakefarmer2.com',
+  first_name: 'Thomas',
+  last_name: 'Warner',
+  phone_no: 9055625637,
+  website_link: 'http://www.warnersfarm.ca/',
   image: open_asset('farmer3.jpeg')
 })
 
 farmer424 = Farmer.create({
   id: 424,
-  farm_name:  'Charlie Farm',
+  farm_name:  'Sugarbush Hill Maple Farm',
   email: 'farmer5@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'farmer',
-  phone_no: 5555,
-  website_link: 'http://www.fakefarmer5.com',
+  first_name: 'Pauline',
+  last_name: 'Maple',
+  phone_no: 7057879787,
+  website_link: 'http://www.sugarbushhill.com/',
   image: open_asset('farmer3.jpeg')
 })
 
 farmer425 = Farmer.create({
   id: 425,
-  farm_name:  'Crystals Farm',
+  farm_name:  'Crystal Farm',
   email: 'farmer6@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'farmer',
-  phone_no: 5555,
-  website_link: 'http://www.fakefarmer5.com',
+  first_name: 'John',
+  last_name: 'Tatomir',
+  phone_no: 5193266272,
+  website_link: 'http://tourismleamington.com/m/listing/view/Crystal-Farms-Ltd',
   image: open_asset('farmer3.jpeg')
 })
 

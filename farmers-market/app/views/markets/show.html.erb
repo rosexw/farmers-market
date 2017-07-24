@@ -9,7 +9,7 @@
     <h3><%=@market.name %></h3>
   </div>
 
-  <div class="show-market-section show-market-info">
+  <div class="show-market-section show-market-two-columns-responsive">
     <div class="left-section">
       <p><%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
       <p><%= @market.days_open %></p>
@@ -32,18 +32,19 @@
 
   <div class="show-market-section">
     <h5>All Farmers at <%=@market.name%>: </h5>
-
-    <div>
       <hr>
       <% @market.farmers.each do |f| %>
-      <h6>Name:</h6>
-        <p>
-        <%= f.first_name%> <%= f.last_name %>
-        </p>
-        <h6>Farm name:</h6>
-        <p>
-        <%= f.farm_name %>
-        </p>
+        <div class="farm-list-items">
+          <div class="left-section">
+            <%= image_tag f.image, alt: f.farm_name %>
+          </div>
+          <div class="right-section">
+            <%=link_to f.website_link do %>
+              <p><b>Name:</b> <%= f.first_name %> <%= f.last_name %></p>
+              <p><b>Farm name:</b> <%= f.farm_name %></p>
+            <% end %>
+          </div>
+        </div>
         <hr>
       <% end %>
     </div>

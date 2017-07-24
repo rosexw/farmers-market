@@ -57,9 +57,13 @@
     list-style-type: circle;
     margin-left: 30px;
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
-.show-market-info {
+.show-market-two-columns-responsive {
   display: flex;
 
   @media (max-width: 800px) {
@@ -74,7 +78,25 @@
   .right-section {
     padding-top: 20px;
     width: 50%;
-    float: right;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+}
+
+.farm-list-items {
+  display: flex;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .left-section {
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  .right-section {
+    padding-left: 20px;
     @media (max-width: 800px) {
       width: 100%;
     }

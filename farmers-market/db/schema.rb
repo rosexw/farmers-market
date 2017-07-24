@@ -48,20 +48,20 @@ ActiveRecord::Schema.define(version: 20170720163921) do
   end
 
   create_table "markets", force: :cascade do |t|
-    t.string   "name"
     t.string   "website_link"
     t.string   "image"
     t.string   "address"
     t.string   "city"
     t.string   "province"
     t.string   "postal_code"
-    t.text     "description"
-    t.string   "time_open"
-    t.string   "days_open"
-    t.float    "lat"
-    t.float    "long"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.text     "description"
+    t.datetime "time_open"
+    t.date     "days_open"
+    t.string   "name"
+    t.float    "lat"
+    t.float    "long"
   end
 
   create_table "products", force: :cascade do |t|
