@@ -26,6 +26,7 @@
     }) %>
 
     <%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(current_farmer.id)})%>
+    <%= react_component("Products", {products: FarmersProduct.get_products_farmer_offers(current_farmer.id)})%>
 
 <% else %>
   not yet
