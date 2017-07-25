@@ -6,8 +6,8 @@
   <h3 class='center-align'>All Markets</h3>
 <% end %>
     <form action = "/markets/" id='home_search' class='row form' method='get'>
-    <div class="input-field col s3">
-      <%= text_field_tag :param, params[:search], :class => 'search_bar'%>
+    <div class="input-field col s4e">
+      <%= text_field_tag :param, params[:search], :placeholder => "Address or Postal Code", :class => 'search_bar'%>
       <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
     </div>
   </form>

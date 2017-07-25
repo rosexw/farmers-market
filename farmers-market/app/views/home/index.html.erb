@@ -11,7 +11,7 @@
 <div>
   <form action = "/search/" id='home_search' class='row form' method='get'>
     <div class="input-field">
-      <div class="input-field col s3">
+      <div class="input-field col s3 search-criteria">
         <%= select_tag(:type, options_for_select([['product', 'product'], ['market', 'market']])) %>
       </div>
       <%= text_field_tag :param, params[:search], :class => 'search_bar'%>
