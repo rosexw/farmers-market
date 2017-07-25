@@ -5,6 +5,9 @@
 .google_maps_container {
   max-width: 800px;
   margin: 0 auto;
+  @media (max-width: 600px) {
+    vertical-align: center;
+  }
 
   .google_maps {
     width: 100%;
@@ -12,7 +15,6 @@
     max-width: 400px;
     float: right;
   }
-
 }
 
 .show-market-title {
