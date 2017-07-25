@@ -24,7 +24,7 @@
   <div class="show-market-section">
     <h5>All products at <%=@market.name%>: </h5>
     <ul>
-      <% @products.each do |product| %>
+      <% @products_sold_here.each do |product| %>
         <li><%= product.product_name %></li>
       <% end %>
     </ul>
