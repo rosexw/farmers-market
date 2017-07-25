@@ -2,13 +2,14 @@
 
 <%= form_for Product.new do |f| %>
     <% if @product.errors.any? %>
+    <strong><b>The following errors prevented saving:</b></strong>
     <div class="error-box">
-      <strong>The following errors prevented saving:</strong>
-        <ul>
-          <% @product.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
+      <ul>
+        <% @product.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
       <% end %>
       </ul>
+    </div>
     <% end %>
 
     <div class="product-form">

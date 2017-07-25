@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.error-message {
-  width: 25%;
-  border: 1px solid;
+.error-box {
+  color: red;
 }
 
 h1 {
@@ -14,6 +13,7 @@ h1 {
 }
 
 .product-form {
+  background-color: white;
   font-size: 14px;
   width: 50%;
   border: 1px solid;

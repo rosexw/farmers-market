@@ -1,11 +1,13 @@
 <h1>Add Market</h1>
 
-<%= form_for Market.new do |f| %>
+<div class="add-market">
+  <%= form_for Market.new do |f| %>
 
-<div class="field">
-  <%= f.label :market %><br />
-  <%= f.select(:name, options_for_select(Market.all_markets_to_array))%>
+  <div class="field">
+    <%= f.label :market %><br />
+    <%= f.select(:name, options_for_select(Market.all_markets_to_array))%>
+  </div>
+
+      <div class="action"><%= f.submit "Submit" %></div>
+    <% end %>
 </div>
-
-    <div class="action"><%= f.submit "Submit" %></div>
-  <% end %>
