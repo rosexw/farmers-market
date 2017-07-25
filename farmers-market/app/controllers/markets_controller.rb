@@ -13,14 +13,8 @@ class MarketsController < ApplicationController
       @hash = Gmaps4rails.build_markers(@market) do |market, marker|
         marker.lat market.lat
         marker.lng market.long
-        marker.infowindow market.description
-    end
-  end
-
-    puts "ALL MARKETS RIGHT NOW"
-    @market.each do |m|
-      puts "///////"
-      puts m.inspect
+        marker.infowindow "#{market.name}"
+      end
     end
   end
 
@@ -30,8 +24,9 @@ class MarketsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@market) do |market, marker|
       marker.lat market.lat
       marker.lng market.long
-      marker.infowindow market.description
+      marker.infowindow "#{market.name}"
     end
+    @products_sold_here = Product.all_products_for_market(params[:id])
   end
 
   def create
