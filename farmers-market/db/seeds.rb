@@ -25,34 +25,34 @@ puts "Re-creating Farmers ..."
 
 # Farmer.destroy_all
 
-farmer420 = Farmer.create({
-  id: 420,
-  farm_name:  'Fred\'s Fancy Fruit',
-  email: 'fred@farms.com',
+farmer300 = Farmer.create({
+  id: 300,
+  farm_name:  'Harmony Meadows Alpacas',
+  email: 'info@harmonymeadowsalpaca.ca',
   password_digest: BCrypt::Password.create('easy'),
-  description: Faker::Hipster.paragraph(4),
-  first_name: 'Fred',
-  last_name: 'Flintstone',
-  phone_no: 5555555555,
-  website_link: 'http://www.fredsfancyfruit.com',
-  image: open_asset('farmer4.jpeg')
+  description: 'We are delighted to be able to share with others the fun of working with these animals; it provides great stress relief at the end of a busy day! Throughout the year, we will be holding official farm open houses for the public, but be sure to let us know if you would like to pop by to see the animals and the luxurious fibre they produce.',
+  first_name: 'Kristi',
+  last_name: 'Mercier',
+  phone_no: 5198415055,
+  website_link: 'http://http://www.harmonymeadowsalpaca.ca/',
+  image: open_asset('alpaca.jpeg')
 })
 
-farmer421 = Farmer.create({
-  id: 421,
+farmer301 = Farmer.create({
+  id: 301,
   farm_name:  'Thames River Melons Ltd.',
   email: 'farmer2@farms.com',
   password_digest: BCrypt::Password.create('easy'),
-  description: Faker::Hipster.paragraph(4),
+  description: 'Thames River Melons is a family owned and operated fruit and vegetable farm located just outside of Innerkip, Ontario. With the help of friends, neighbours, and our community, we grow, harvest, and sell a wide variety of produce.',
   first_name: 'Rob',
   last_name: 'Thames',
   phone_no: 5194693636,
   website_link: 'http://www.thamesrivermelons.com/',
-  image: open_asset('farmer1.jpeg')
+  image: open_asset('ChesneyFamily.jpg')
 })
 
-farmer422 = Farmer.create({
-  id: 422,
+farmer302 = Farmer.create({
+  id: 302,
   farm_name:  'Staite\'s Honey Enterprise',
   email: 'farmer3@farms.com',
   password_digest: BCrypt::Password.create('easy'),
@@ -61,11 +61,11 @@ farmer422 = Farmer.create({
   last_name: 'Staites',
   phone_no: 9054733401,
   website_link: 'http://www.staites-honey.com',
-  image: open_asset('farmer2.jpeg')
+  image: open_asset('staites-honey.png')
 })
 
-farmer423 = Farmer.create({
-  id: 423,
+farmer303 = Farmer.create({
+  id: 303,
   farm_name:  'Warner\'s Farm',
   email: 'farmer4@farms.com',
   password_digest: BCrypt::Password.create('easy'),
@@ -74,11 +74,11 @@ farmer423 = Farmer.create({
   last_name: 'Warner',
   phone_no: 9055625637,
   website_link: 'http://www.warnersfarm.ca/',
-  image: open_asset('farmer3.jpeg')
+  image: open_asset('farmer4.jpeg')
 })
 
-farmer424 = Farmer.create({
-  id: 424,
+farmer304 = Farmer.create({
+  id: 304,
   farm_name:  'Sugarbush Hill Maple Farm',
   email: 'farmer5@farms.com',
   password_digest: BCrypt::Password.create('easy'),
@@ -87,11 +87,11 @@ farmer424 = Farmer.create({
   last_name: 'Maple',
   phone_no: 7057879787,
   website_link: 'http://www.sugarbushhill.com/',
-  image: open_asset('farmer3.jpeg')
+  image: open_asset('sugarbush.jpg')
 })
 
-farmer425 = Farmer.create({
-  id: 425,
+farmer305 = Farmer.create({
+  id: 305,
   farm_name:  'Crystal Farm',
   email: 'farmer6@farms.com',
   password_digest: BCrypt::Password.create('easy'),
@@ -100,28 +100,28 @@ farmer425 = Farmer.create({
   last_name: 'Tatomir',
   phone_no: 5193266272,
   website_link: 'http://tourismleamington.com/m/listing/view/Crystal-Farms-Ltd',
-  image: open_asset('farmer3.jpeg')
+  image: open_asset('farmer2.jpeg')
 })
 
-farmer426 = Farmer.create({
-  id: 426,
-  farm_name:  'Fakest Farm',
+farmer306 = Farmer.create({
+  id: 306,
+  farm_name:  'The Cutting Veg',
   email: 'farmer7@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: Faker::Hipster.paragraph(4),
-  first_name: 'fake',
-  last_name: 'farmer',
-  phone_no: 5555,
-  website_link: 'http://www.fakefarmer5.com',
-  image: open_asset('farmer3.jpeg')
+  first_name: 'Daniel',
+  last_name: 'Hoffman',
+  phone_no: 6473887444,
+  website_link: 'http://www.thecuttingveg.com/',
+  image: open_asset('Daniel.jpg')
 })
 
 ## MARKETS
 
 puts "Creating Markets ..."
 
-market420 = Market.create({
-  id: 420,
+market300 = Market.create({
+  id: 300,
   name: 'Metro Hall Farmer\'s Market',
   days_open: 'Thursday',
   time_open: '8:00',
@@ -134,8 +134,8 @@ market420 = Market.create({
   image: open_asset('market1.jpeg')
   })
 
-market421 = Market.create({
-  id: 421,
+market301 = Market.create({
+  id: 301,
   name: 'Nathan Phillips Square Farmer\'s Market',
   days_open: 'Wednesday',
   time_open: '6:30',
@@ -148,8 +148,8 @@ market421 = Market.create({
   image: open_asset('market2.jpeg')
   })
 
-market422 = Market.create({
-  id: 422,
+market302 = Market.create({
+  id: 302,
   name: 'The Farmer\'s Market at SickKids',
   days_open: 'Tuesday',
   time_open: '9:00',
@@ -158,12 +158,12 @@ market422 = Market.create({
   city: 'Toronto',
   province: 'Ontario',
   postal_code: 'M5G 1X8',
-  website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
+  website_link: 'http://www.sickkids.ca/eventlistings/2012/farmers-market-summer2012.html',
   image: open_asset('market3.jpeg')
   })
 
-  market423 = Market.create({
-    id: 423,
+  market303 = Market.create({
+    id: 303,
     name: 'Evergreen Brick Works Farmers’ Market',
     days_open: 'Wednesday',
     time_open: '3:30',
@@ -176,8 +176,8 @@ market422 = Market.create({
     image: open_asset('market3.jpeg')
     })
 
-    market424 = Market.create({
-      id: 424,
+    market304 = Market.create({
+      id: 304,
       name: 'Leslieville Farmers Market',
       days_open: 'Sunday',
       time_open: '9:00',
@@ -195,24 +195,24 @@ market422 = Market.create({
 
   puts "Creating Users ..."
 
-  user420 = User.create({
-    id: 420,
+  user300 = User.create({
+    id: 300,
     first_name: 'Bob',
     last_name: 'Smith',
     email: 'bob@gmail.com',
     password_digest: BCrypt::Password.create('easy')
     })
 
-  user421 = User.create({
-    id: 421,
+  user301 = User.create({
+    id: 301,
     first_name: 'Mary',
     last_name: 'Smith',
     email: 'mary@gmail.com',
     password_digest: BCrypt::Password.create('easy')
     })
 
-  user422 = User.create({
-    id: 422,
+  user302 = User.create({
+    id: 302,
     first_name: 'Sally',
     last_name: 'Smith',
     email: 'sally@gmail.com',
@@ -223,8 +223,8 @@ market422 = Market.create({
 
     puts "Creating Products ..."
 
-    product420 = Product.create({
-      id: 420,
+    product300 = Product.create({
+      id: 300,
       product_name: 'carrots',
       product_type: 'vegetable',
       on_hand: 'true',
@@ -232,8 +232,8 @@ market422 = Market.create({
       non_gmo: 'false'
       })
 
-    product421 = Product.create({
-      id: 421,
+    product301 = Product.create({
+      id: 301,
       product_name: 'blueberries',
       product_type: 'fruit',
       on_hand: 'false',
@@ -241,8 +241,8 @@ market422 = Market.create({
       non_gmo: 'false'
       })
 
-    product422 = Product.create({
-      id: 422,
+    product302 = Product.create({
+      id: 302,
       product_name: 'honeys',
       product_type: 'other',
       on_hand: 'true',
@@ -250,8 +250,8 @@ market422 = Market.create({
       non_gmo: 'true'
       })
 
-      product423 = Product.create({
-        id: 423,
+      product303 = Product.create({
+        id: 303,
         product_name: 'carrots',
         product_type: 'vegetable',
         on_hand: 'true',
@@ -259,8 +259,8 @@ market422 = Market.create({
         non_gmo: 'true'
         })
 
-      product424 = Product.create({
-        id: 424,
+      product304 = Product.create({
+        id: 304,
         product_name: 'cabbages',
         product_type: 'vegetable',
         on_hand: 'true',
@@ -268,8 +268,8 @@ market422 = Market.create({
         non_gmo: 'true'
         })
 
-      product425 = Product.create({
-        id: 425,
+      product305 = Product.create({
+        id: 305,
         product_name: 'flowers',
         product_type: 'other',
         on_hand: 'true',
@@ -277,8 +277,8 @@ market422 = Market.create({
         non_gmo: 'true'
         })
 
-      product426 = Product.create({
-        id: 426,
+      product306 = Product.create({
+        id: 306,
         product_name: 'apples',
         product_type: 'fruit',
         on_hand: 'true',
@@ -288,27 +288,27 @@ market422 = Market.create({
 
       puts "Creating Connnections ..."
 
-      frm1 = Farmer.find(420)
-      frm2 = Farmer.find(421)
-      frm3 = Farmer.find(422)
-      frm4 = Farmer.find(423)
-      frm5 = Farmer.find(424)
-      frm6 = Farmer.find(425)
-      frm7 = Farmer.find(426)
+      frm1 = Farmer.find(300)
+      frm2 = Farmer.find(301)
+      frm3 = Farmer.find(302)
+      frm4 = Farmer.find(303)
+      frm5 = Farmer.find(304)
+      frm6 = Farmer.find(305)
+      frm7 = Farmer.find(306)
 
-      mkt1 = Market.find(420)
-      mkt2 = Market.find(421)
-      mkt3 = Market.find(422)
-      mkt4 = Market.find(423)
-      mkt5 = Market.find(424)
+      mkt1 = Market.find(300)
+      mkt2 = Market.find(301)
+      mkt3 = Market.find(302)
+      mkt4 = Market.find(303)
+      mkt5 = Market.find(304)
 
-      prd1 = Product.find(420)
-      prd2 = Product.find(421)
-      prd3 = Product.find(422)
-      prd4 = Product.find(423)
-      prd5 = Product.find(424)
-      prd6 = Product.find(425)
-      prd7 = Product.find(426)
+      prd1 = Product.find(300)
+      prd2 = Product.find(301)
+      prd3 = Product.find(302)
+      prd4 = Product.find(303)
+      prd5 = Product.find(304)
+      prd6 = Product.find(305)
+      prd7 = Product.find(306)
 
 
       puts "Creating Farmer/Market bridge table"
