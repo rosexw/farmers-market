@@ -2,55 +2,10 @@
 
 <%= form_for Market.new do |f| %>
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :website_link %><br />
-      <%= f.text_field :website_link %>
-    </div>
-
-    <div class="field">
-      <%= f.label :image %><br />
-      <%= f.text_field :image %>
-    </div>
-
-    <div class="field">
-      <%= f.label :address %><br />
-      <%= f.text_field :address%>
-    </div>
-
-    <div class="field">
-      <%= f.label :city %><br />
-      <%= f.text_field :city %>
-    </div>
-
-    <div class="field">
-      <%= f.label :province %><br />
-      <%= f.text_field :province %>
-    </div>
-
-    <div class="field">
-      <%= f.label :postal_code %><br />
-      <%= f.text_field :postal_code %>
-    </div>
-
-    <div class="field">
-      <%= f.label :description %><br />
-      <%= f.text_field :description %>
-    </div>
-
-    <div class="field">
-      <%= f.label :time_open %><br />
-      <%= f.text_field :time_open %>
-    </div>
-
-    <div class="field">
-      <%= f.label :days_open %><br />
-      <%= f.text_field :days_open %>
-    </div>
+<div class="field">
+  <%= f.label :market %><br />
+  <%= f.select(:name, options_for_select(Market.all_markets_to_array))%>
+</div>
 
     <div class="action"><%= f.submit "Submit" %></div>
   <% end %>

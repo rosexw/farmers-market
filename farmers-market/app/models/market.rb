@@ -23,4 +23,12 @@ class Market < ApplicationRecord
   def self.find_markets_by_name(market_name)
     Market.where('name LIKE ?', "%#{market_name.capitalize}%")
   end
+
+  def self.all_markets_to_array
+    array = [];
+    Market.all.each do |market|
+      array.push [market.name, market.name]
+    end
+    return array
+  end
 end
