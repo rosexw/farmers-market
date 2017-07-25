@@ -36,7 +36,7 @@
       <% @market.farmers.each do |f| %>
         <div class="farm-list-items">
           <div class="left-section">
-            <%= image_tag f.image, alt: f.farm_name %>
+            <%= image_tag f.image.thumb, alt: f.farm_name %>
           </div>
           <div class="right-section">
             <%=link_to f.website_link do %>
