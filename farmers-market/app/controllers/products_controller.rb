@@ -16,19 +16,15 @@ class ProductsController < ApplicationController
       x.farmer_id = current_farmer.id
       x.product_id = @product.id
       x.save
-      redirect_to root_url, notice: 'Thank you for adding a product!'
+      redirect_to dashboard_index_path, notice: 'Thank you for adding a product!'
     else
       render :new
     end
   end
 
   def destroy
-    @product = Product.find params[:id]
-    @product.destroy
-    respond_to do |format|
-      format.html { redirect_to dashboard_index_path, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    current_farmer.products.delete(params[:id])
+    redirect_to dashboard_index_path
   end
 
   def allowed_params
