@@ -17,6 +17,7 @@
 form {
   // width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .row .search-criteria.col.s3 {
@@ -77,5 +78,8 @@ form {
     h4 {
       font-size: 20px;
     }
+  }
+  a {
+    font-size: 16px;
   }
 }

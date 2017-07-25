@@ -1,17 +1,13 @@
-<h1>Dashboard</h1>
-
 <% if current_user %>
+  <h1><%= current_user.first_name%>'s Dashboard</h1>
   <%= react_component("UserProfile", {
     type: 'user',
     first_name: current_user.first_name,
     last_name: current_user.last_name,
     email: current_user.email
     }) %>
-    <%= link_to "Edit", "/dashboard/#{current_user.id}/edit"%>
-    <%= link_to "Delete", "/users/#{current_user.id}", method: :delete%>
 <% elsif current_farmer %>
-  <%= link_to "Edit", "/dashboard/#{current_farmer.id}/edit"%>
-  <%= link_to "Delete", "/farmers/#{current_farmer.id}", method: :delete%>
+  <h1><%= current_farmer.first_name%>'s Dashboard</h1>
   <%= react_component("FarmerProfile", {
     type: 'farmer',
     id: current_farmer.id,
@@ -25,11 +21,13 @@
     image: "#{current_farmer.image}"
     }) %>
 
-    <%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(current_farmer.id)})%>
-    <%= react_component("Products", {
-      products: FarmersProduct.get_products_farmer_offers(current_farmer.id),
-      id: current_farmer.id
-      })%>
+    <div class="farmers-profile-markets-products">
+      <%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(current_farmer.id)})%>
+      <%= react_component("Products", {
+        products: FarmersProduct.get_products_farmer_offers(current_farmer.id),
+        id: current_farmer.id
+        })%>
+    </div>
 
 <% else %>
   not yet

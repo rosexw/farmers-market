@@ -7,7 +7,7 @@ class Products extends React.Component {
     </div>
   );
    return (
-     <div>Products: {listProducts}</div>
+     <div><b>Products:</b> {listProducts}</div>
    );
   }
 }

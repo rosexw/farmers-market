@@ -28,7 +28,9 @@ class FarmerProfile extends React.Component {
 
   render() {
     return (<div>
-      <div className="farmer-profile-image"><img src={this.props.image}/></div>
+      <div className="farmer-profile-image">
+        <img src={this.props.image}/>
+      </div>
       <div className="farmer-profile-info">
         <div className="field"><b> Farm Name: </b>{this.props.farm_name} </div>
         <div className="field"><b> First Name: </b>{this.props.first_name} </div>
@@ -38,9 +40,11 @@ class FarmerProfile extends React.Component {
         <div className="field"><b> Website_Link: </b>{this.props.website_link} </div>
         <div className="field"><b> Description: </b>{this.props.description} </div>
       </div>
-      <button onClick={this.handleClickAddProduct}>Add Product</button>
-      <button onClick={this.handleClickAddMarket}>Add Market</button>
-      <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
+      <div className="farmer-profile-buttons">
+        <button onClick={this.handleClickAddProduct}>Add Product</button>
+        <button onClick={this.handleClickAddMarket}>Add Market</button>
+        <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
+      </div>
     </div>);
   }
 }

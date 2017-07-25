@@ -1,5 +1,5 @@
 <% if current_user &&current_user.id == params[:id].to_i %>
- <h1>Edit Current User <%=current_user.first_name%> </h1>
+ <h1>Edit User <%=current_user.first_name%> </h1>
  <%= form_for(@user, :url => { :action => "update", :method => 'put'}) do |f| %>
    <div class="field">
      <%= f.label :first_name, "First Name" %><br />
@@ -27,7 +27,7 @@
  <% end %>
 
 <% elsif current_farmer && current_farmer.id == params[:id].to_i %>
-  <h1>Edit Current Farmer <%=current_farmer.first_name%> </h1>
+  <h1>Edit Farmer <%=current_farmer.first_name%> </h1>
   <%= form_for(@farmer, :url => { :action => "update", :method => 'put'}) do |f| %>
     <div class="field">
       <%= f.label :farm_name, "Farm Name:" %><br />
