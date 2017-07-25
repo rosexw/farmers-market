@@ -19,13 +19,6 @@ class FarmerProfile extends React.Component {
   console.log('The link was clicked');
   }
 
-  handleClickViewMarket(e) {
-  const url = '/farmers/' + this.props.id + '/markets'
-  e.preventDefault();
-  window.location.href = url;
-  console.log('View Markets');
-  }
-
   render() {
     return (<div>
       <div className="farmer-profile-image">

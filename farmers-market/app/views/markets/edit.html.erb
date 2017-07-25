@@ -1,0 +1,23 @@
+<h1>Delete Market Page</h1>
+
+<section class="">
+
+  <div class="">
+    <table class="products-table responsive-table">
+      <thead>
+        <tr>
+          <th>Market</th>
+          <th>Address</th>
+          <th>Time Open</th>
+          <th>Day Open</th>
+          </thead>
+          <tbody>
+            <% @farmer_markets.each do |farmer_market| %>
+            <%= render 'all', farmer_market: farmer_market %>
+            <% end %>
+          </tbody>
+        </tr>
+
+    </table>
+  </div>
+</section>
