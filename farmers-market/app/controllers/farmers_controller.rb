@@ -18,7 +18,7 @@ class FarmersController < ApplicationController
       @farmer = Farmer.new(allowed_params)
       if @farmer.save
         session[:farmer_id] = @farmer.id
-        redirect_to root_url, notice: 'Thank you for signing up!'
+        redirect_to dashboard_index_path, notice: 'Thank you for signing up!'
       else
         render :new
       end

@@ -37,7 +37,7 @@ class MarketsController < ApplicationController
       x.farmer_id = current_farmer.id
       x.market_id = @market.id
       x.save
-      redirect_to root_url, notice: 'Thank you for adding a market!'
+      redirect_to dashboard_index_path, notice: 'Thank you for adding a market!'
     else
       render :new
     end

@@ -8,13 +8,13 @@ class SessionsController < ApplicationController
 
     if farmer && farmer.authenticate(params[:password])
       session[:farmer_id] = farmer.id
-      redirect_to '/'
+      redirect_to dashboard_index_path
       result = request.location.city
       puts 'THIS IS RESULT!!!!! >>>>>>>>>>>>>>>>>>>>>'
       puts result.inspect
     elsif user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/'
+      redirect_to dashboard_index_path
     else
       redirect_to '/registration_bridge/index'
     end

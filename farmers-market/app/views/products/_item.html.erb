@@ -12,9 +12,6 @@
     <%= farmer_product.product.non_gmo %>
   </td>
   <td>
-    <%= farmer_product.product.on_hand %>
-  </td>
-  <td>
     <%= link_to "delete", farmer_product.product, method: :delete, data: { confirm: "Are you sure you want to remove this item?" } %>
   </td>
 </tr>
