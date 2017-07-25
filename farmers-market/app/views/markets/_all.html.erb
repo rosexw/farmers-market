@@ -3,22 +3,7 @@
     <b><%= farmer_market.market.name %></b>
   </td>
   <td>
-    <%= farmer_market.market.website_link %>
-  </td>
-  <td>
     <%= farmer_market.market.address %>
-  </td>
-  <td>
-    <%= farmer_market.market.city %>
-  </td>
-  <td>
-    <%= farmer_market.market.province %>
-  </td>
-  <td>
-    <%= farmer_market.market.postal_code %>
-  </td>
-  <td>
-    <%= farmer_market.market.description %>
   </td>
   <td>
     <%= farmer_market.market.time_open %>
@@ -27,6 +12,6 @@
     <%= farmer_market.market.days_open %>
   </td>
   <td>
-    <%= link_to "delete", farmer_market.market, method: :delete %>
+    <%= link_to "delete", farmer_market.market, method: :delete, data: { confirm: "Are you sure you want to remove this market?" } %>
   </td>
 </tr>
