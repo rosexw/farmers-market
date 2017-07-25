@@ -34,7 +34,7 @@ farmer300 = Farmer.create({
   first_name: 'Kristi',
   last_name: 'Mercier',
   phone_no: 5198415055,
-  website_link: 'http://http://www.harmonymeadowsalpaca.ca/',
+  website_link: 'http://www.harmonymeadowsalpaca.ca/',
   image: open_asset('alpaca.jpeg')
 })
 
