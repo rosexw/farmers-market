@@ -8,6 +8,10 @@ class ProductsController < ApplicationController
     puts @product.inspect
   end
 
+  def new
+    @product = Product.new
+  end
+
   def create
     @product = Product.find_or_initialize_by(allowed_params)
     @product.save

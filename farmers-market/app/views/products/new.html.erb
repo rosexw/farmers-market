@@ -1,6 +1,15 @@
 <h1>Add Product</h1>
 
 <%= form_for Product.new do |f| %>
+    <% if @product.errors.any? %>
+    <div class="error-box">
+      <strong>The following errors prevented saving:</strong>
+        <ul>
+          <% @product.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+      <% end %>
+      </ul>
+    <% end %>
 
     <div class="field">
       <%= f.label :product_name %><br />
