@@ -17,6 +17,10 @@
   }
 }
 
+h3 {
+  padding-top: 20px;
+}
+
 .show-market-title {
   a {
     border-radius: 50%;
@@ -118,14 +122,18 @@
 
 .search-function {
   max-width: 1000px;
-  align-items: center;
   margin: 50px auto 20px auto;
   overflow: hidden;
+  width: 90%;
   border: 1px solid black;
   background-color: white;
   border-radius: 10px;
   padding-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 0;
+  .search {
+    align-items: center;
+    margin-left: 50px;
+  }
   .field {
     align-items: center;
   }

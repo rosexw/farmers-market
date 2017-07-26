@@ -5,7 +5,7 @@
 <% else %>
   <h3 class='center-align'>All Markets</h3>
 <% end %>
-  <div class="search-function max-width-container">
+  <div class="search-function">
     <form action = "/markets/" id='home_search' class='row form' method='get'>
       <div class="input-field col s4e field">
         <%= text_field_tag :param, params[:search], :placeholder => "Address or Postal Code", :class => 'search_bar'%>
