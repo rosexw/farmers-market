@@ -17,6 +17,7 @@
  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 .nav-wrapper {
+  position: fixed;
   background-color: #419B44;
 
   .brand-logo {
@@ -35,5 +36,14 @@
 body {
   background-color: #F5F4E1;
   color: #1e2127;
-  font-size: 18px;
+  font-size: 24px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.max-width-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
 }

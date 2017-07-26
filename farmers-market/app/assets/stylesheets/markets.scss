@@ -69,6 +69,7 @@
   }
   .left-section {
     width: 50%;
+    padding-right: 10px;
     @media (max-width: 800px) {
       width: 100%;
     }
@@ -103,4 +104,10 @@
 
 #map {
   height: 300px;
+}
+
+.add-market {
+  width: 50%;
+  align: center;
+  margin: 50px auto 20px auto;
 }
