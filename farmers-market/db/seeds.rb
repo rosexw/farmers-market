@@ -127,9 +127,6 @@ market300 = Market.create({
   time_open: '8:00',
   description: 'The Metro Hall Farmers\' Market showcases the best that Ontario grows. From apples to zucchinis with everything in between. Gorgeous flowers, amazing cheeses, local honey as well as fruits and vegetables can be found every Thursday from the end of May to the middle of October.',
   address: '55 John Street, ON, Canada',
-  city: 'Toronto',
-  province: 'Ontario',
-  postal_code: 'M5V 3C6',
   website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
   image: open_asset('market1.jpeg')
   })
@@ -141,9 +138,6 @@ market301 = Market.create({
   time_open: '6:30',
   description: 'The Nathan Phillips Square Farmers\' Market is located predominantly on the North and East side of the square. This market begins annually in June and lasts until mid October, running every Wednesday, between 8am-3pm. A popular market for office workers, condo dwellers, and tourists coming to see bands play at the stage, especially during Fresh Wednesdays where food vendors are slated to share the market\'s venue on the square.',
   address: '100 Queen Street West, ON, Canada',
-  city: 'Toronto',
-  province: 'Ontario',
-  postal_code: 'M5H 2N2',
   website_link: 'http://www.toronto.ca/311/knowledgebase/01/101000050501.html',
   image: open_asset('market2.jpeg')
   })
@@ -155,40 +149,31 @@ market302 = Market.create({
   time_open: '9:00',
   description: 'Check out the Farmers\' Market every Tuesday.  Local fruits and vegetables, herbs, honey, cheese, pies, potatoes and soap are all on sale.',
   address: '555 University Avenue, ON, Canada',
-  city: 'Toronto',
-  province: 'Ontario',
-  postal_code: 'M5G 1X8',
   website_link: 'http://www.sickkids.ca/eventlistings/2012/farmers-market-summer2012.html',
   image: open_asset('market3.jpeg')
   })
 
-  market303 = Market.create({
-    id: 303,
-    name: 'Evergreen Brick Works Farmers’ Market',
-    days_open: 'Wednesday',
-    time_open: '3:30',
-    description: 'Our goal is simple: To work with our community to help people make healthier food choices. In doing this we will create a food system that is ecologically and economically sustainable.',
-    address: '550 Bayview Avenue',
-    city: 'Toronto',
-    province: 'Ontario',
-    postal_code: 'M4W 3X8',
-    website_link: 'http://johnstreetmarket.ca/',
-    image: open_asset('market3.jpeg')
-    })
+market303 = Market.create({
+  id: 303,
+  name: 'Evergreen Brick Works Farmers’ Market',
+  days_open: 'Wednesday',
+  time_open: '3:30',
+  description: 'Our goal is simple: To work with our community to help people make healthier food choices. In doing this we will create a food system that is ecologically and economically sustainable.',
+  address: '550 Bayview Avenue',
+  website_link: 'http://johnstreetmarket.ca/',
+  image: open_asset('market3.jpeg')
+  })
 
-    market304 = Market.create({
-      id: 304,
-      name: 'Leslieville Farmers Market',
-      days_open: 'Sunday',
-      time_open: '9:00',
-      description: 'By fostering engagement and relationship among marketgoers and local environmentally responsible food producers, Leslieville Farmers’ Market increases access to and awareness of local and seasonal food.',
-      address: '20 Woodward Avenue, ON, Canada',
-      city: 'Toronto',
-      province: 'Ontario',
-      postal_code: 'M4L 1A7',
-      website_link: 'http://www.leslievillemarket.com/',
-      image: open_asset('market3.jpeg')
-      })
+market304 = Market.create({
+  id: 304,
+  name: 'Leslieville Farmers Market',
+  days_open: 'Sunday',
+  time_open: '9:00',
+  description: 'By fostering engagement and relationship among marketgoers and local environmentally responsible food producers, Leslieville Farmers’ Market increases access to and awareness of local and seasonal food.',
+  address: '20 Woodward Avenue, ON, Canada',
+  website_link: 'http://www.leslievillemarket.com/',
+  image: open_asset('market3.jpeg')
+  })
 
 
   ## USERS
@@ -227,7 +212,6 @@ market302 = Market.create({
       id: 300,
       product_name: 'carrots',
       product_type: 'vegetable',
-      on_hand: 'true',
       organic: 'true',
       non_gmo: 'false'
       })
@@ -236,7 +220,6 @@ market302 = Market.create({
       id: 301,
       product_name: 'blueberries',
       product_type: 'fruit',
-      on_hand: 'false',
       organic: 'true',
       non_gmo: 'false'
       })
@@ -245,7 +228,6 @@ market302 = Market.create({
       id: 302,
       product_name: 'cupcakes',
       product_type: 'other',
-      on_hand: 'true',
       organic: 'false',
       non_gmo: 'true'
       })
@@ -254,7 +236,6 @@ market302 = Market.create({
         id: 303,
         product_name: 'carrots',
         product_type: 'vegetable',
-        on_hand: 'true',
         organic: 'true',
         non_gmo: 'true'
         })
@@ -263,7 +244,6 @@ market302 = Market.create({
         id: 304,
         product_name: 'cabbages',
         product_type: 'vegetable',
-        on_hand: 'true',
         organic: 'false',
         non_gmo: 'true'
         })
@@ -272,7 +252,6 @@ market302 = Market.create({
         id: 305,
         product_name: 'flowers',
         product_type: 'other',
-        on_hand: 'true',
         organic: 'false',
         non_gmo: 'true'
         })
@@ -281,7 +260,6 @@ market302 = Market.create({
         id: 306,
         product_name: 'apples',
         product_type: 'fruit',
-        on_hand: 'true',
         organic: 'false',
         non_gmo: 'true'
         })
@@ -310,6 +288,9 @@ market302 = Market.create({
       prd6 = Product.find(305)
       prd7 = Product.find(306)
 
+      usr1 = User.find(300)
+      usr2 = User.find(301)
+      usr3 = User.find(302)
 
       puts "Creating Farmer/Market bridge table"
       ## FARMER-MARKET
