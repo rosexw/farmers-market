@@ -6,6 +6,27 @@
     last_name: current_user.last_name,
     email: current_user.email
     }) %>
+
+  <div>
+    <h2>Favourite Markets:</h2>
+    <ul>
+      <li><%= link_to "Metro Hall Farmer's Market", "/markets/300" %></li>
+      <li><%= link_to "Nathan Phillips Square Farmer's Market", "/markets/301" %></li>
+      <li><%= link_to "The Farmer's Market at SickKids", "/markets/302" %></li>
+    </ul>
+
+    <h2>Favourite Farmers:</h2>
+    <ul>
+      <li><%= link_to "Harmony Meadows Alpacas", "/farmers/300" %></li>
+      <li><%= link_to "The Cutting Veg", "/farmers/306" %></li>
+      <li><%= link_to "Staite's Honey Enterprise", "/farmers/302" %></li>
+    </ul>
+
+
+  </div>
+
+
+
 <% elsif current_farmer %>
   <h1><%= current_farmer.first_name%>'s Dashboard</h1>
   <%= react_component("FarmerProfile", {

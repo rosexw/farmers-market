@@ -30,7 +30,7 @@
   handler = Gmaps.build('Google');
   handler.buildMap({
     provider: {
-      disableDefaultUI: true
+      disableDefaultUI: false
       // pass in other Google Maps API options here
     },
     internal: {
@@ -41,6 +41,10 @@
   function(){
     // console.log ("maps running on index");
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    <% if @search_location %>
+      handler.addCircles([<%=raw @search_location.to_json%>]);
+      markers = handler.addMarker(<%=raw @search_location.to_json%>);
+    <% end %>
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
     handler.getMap().setZoom(10);
