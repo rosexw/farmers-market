@@ -12,11 +12,7 @@
   <div class="show-market-section show-market-two-columns-responsive">
     <div class="left-section">
       <p><b>Address:</b> <%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
-<<<<<<< HEAD
-      <p><b>Days Open:</b> <%= @market.days_open.to_s %></p>
-=======
       <p><b>Days Open:</b> <%= @market.days_open %></p>
->>>>>>> css
       <p><b>Time Open:</b> <%= @market.time_open %></p>
       <p><b>Description:</b> <%= @market.description %></p>
       <p><b>Market Website:</b> <%= link_to @market.name, @market.website_link %></p>
@@ -69,6 +65,7 @@
         <% end %>
       </div>
     </div>
+<<<<<<< HEAD
   <% end %>
 
 
@@ -79,6 +76,10 @@
 
 
 </section>
+=======
+  </div>
+  <% end %>
+>>>>>>> css
 
   <script>
       handler = Gmaps.build('Google');
