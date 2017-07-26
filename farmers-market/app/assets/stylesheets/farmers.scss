@@ -4,5 +4,10 @@
 
 .farm_details {
   overflow: hidden;
-  left: 50%;
+  margin: 0 auto;
+  width: auto;
+}
+
+.farmer-details-section {
+  display: flex;
 }
