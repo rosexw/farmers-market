@@ -1,5 +1,5 @@
 <% if current_user &&current_user.id == params[:id].to_i %>
- <h1>Edit User <%=current_user.first_name%> </h1>
+ <h1><strong>Edit User <%=current_user.first_name%> </strong></h1>
  <div class="max-width-container">
    <%= form_for(@user, :url => { :action => "update", :method => 'put'}) do |f| %>
      <div class="field">
@@ -14,7 +14,6 @@
        <%= f.label :email, "E-mail" %><br />
        <%= f.text_field :email %>
      </div>
-   </div>
      <!-- <div class="field">
        <%= f.label :password, "Password" %><br />
        <%= f.password_field :password, :autocomplete => "off"  %>
@@ -26,10 +25,11 @@
    <div class="action_container">
      <%= f.submit %>
    </div>
- <% end %>
+   <% end %>
+</div>
 
 <% elsif current_farmer && current_farmer.id == params[:id].to_i %>
-  <h1>Edit Farmer <%=current_farmer.first_name%> </h1>
+  <h1><strong>Edit Farmer <%=current_farmer.first_name%> </strong></h1>
   <div class="max-width-container">
     <%= form_for(@farmer, :url => { :action => "update", :method => 'put'}) do |f| %>
       <div class="field">
