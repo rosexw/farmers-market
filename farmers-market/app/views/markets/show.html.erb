@@ -11,7 +11,7 @@
 
   <div class="show-market-section show-market-two-columns-responsive">
     <div class="left-section">
-      <p><b>Address:</b> <%= @market.address %>, <%= @market.city %>, <%= @market.province %>, <%= @market.postal_code %></p>
+      <p><b>Address:</b> <%= @market.address %></p>
       <p><b>Days Open:</b> <%= @market.days_open %></p>
       <p><b>Time Open:</b> <%= @market.time_open %></p>
       <p><b>Description:</b> <%= @market.description %></p>
@@ -31,25 +31,42 @@
     </ul>
   </div>
 
-  <div class="show-market-section">
-    <h5>All Farmers at <%=@market.name%>: </h5>
-      <hr>
-      <% @market.farmers.each do |f| %>
-        <div class="farm-list-items">
-          <div class="left-section">
-            <%= image_tag f.image.thumb, alt: f.farm_name %>
-          </div>
-          <div class="right-section">
-            <%=link_to "/farmers/#{f.id}" do %>
-              <p><b>Farm details:</b> <%= f.farm_name %></p>
-            <% end %>
-          </div>
-        </div>
+  <% if current_farmer %>
+    <div class="show-market-section">
+      <h5> <%=@market.name%>: </h5>
         <hr>
-      <% end %>
+          <div class="farm-list-items">
+            <div class="left-section">
+            </div>
+            <div class="right-section">
+              <p><b>Farm details:</b> <%= current_farmer.farm_name %></p>
+              <li><%= link_to "Delete", "/markets/#{@market.id}", method: :delete, data: { confirm: "Are you sure you want to leave this market?" }%></li>
+            </div>
+          </div>
+          <hr>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <div class="show-market-section">
+      <h5>All Farmers at <%=@market.name%>: </h5>
+        <hr>
+        <% @market.farmers.each do |f| %>
+          <div class="farm-list-items">
+            <div class="left-section">
+              <%= image_tag f.image.thumb, alt: f.farm_name %>
+            </div>
+            <div class="right-section">
+              <%=link_to "/farmers/#{f.id}" do %>
+                <p><b>Farm details:</b> <%= f.farm_name %></p>
+              <% end %>
+            </div>
+          </div>
+          <hr>
+        <% end %>
+      </div>
+    </div>
   <% end %>
+
 
   <script>
       handler = Gmaps.build('Google');

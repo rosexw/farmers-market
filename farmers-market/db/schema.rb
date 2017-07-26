@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720163921) do
+ActiveRecord::Schema.define(version: 20170726150732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,27 +47,36 @@ ActiveRecord::Schema.define(version: 20170720163921) do
     t.index ["product_id"], name: "index_farmers_products_on_product_id", using: :btree
   end
 
+  create_table "faves", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "market_id"
+    t.integer  "farmer_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_faves_on_farmer_id", using: :btree
+    t.index ["market_id"], name: "index_faves_on_market_id", using: :btree
+    t.index ["product_id"], name: "index_faves_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_faves_on_user_id", using: :btree
+  end
+
   create_table "markets", force: :cascade do |t|
     t.string   "website_link"
     t.string   "image"
     t.string   "address"
-    t.string   "city"
-    t.string   "province"
-    t.string   "postal_code"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.text     "description"
-    t.datetime "time_open"
-    t.date     "days_open"
     t.string   "name"
     t.float    "lat"
     t.float    "long"
+    t.string   "days_open"
+    t.string   "time_open"
   end
 
   create_table "products", force: :cascade do |t|
     t.text     "product_name"
     t.text     "product_type"
-    t.boolean  "on_hand"
     t.boolean  "organic"
     t.boolean  "non_gmo"
     t.datetime "created_at",   null: false
@@ -87,4 +96,8 @@ ActiveRecord::Schema.define(version: 20170720163921) do
   add_foreign_key "farmer_markets", "markets"
   add_foreign_key "farmers_products", "farmers"
   add_foreign_key "farmers_products", "products"
+  add_foreign_key "faves", "farmers"
+  add_foreign_key "faves", "markets"
+  add_foreign_key "faves", "products"
+  add_foreign_key "faves", "users"
 end

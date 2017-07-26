@@ -43,6 +43,11 @@ class MarketsController < ApplicationController
     end
   end
 
+  def destroy
+    current_farmer.markets.delete(params[:id])
+    redirect_to dashboard_index_path
+  end
+
   def allowed_params
     params.require(:market).permit(
     :name,
