@@ -36,7 +36,7 @@ class FarmerProfile extends React.Component {
       <div className="farmer-profile-buttons">
         <button onClick={this.handleClickAddProduct}>Add Product</button>
         <button onClick={this.handleClickAddMarket}>Add Market</button>
-        <button onClick={this.handleClickViewProduct.bind(this)}>View Products</button>
+        <button onClick={this.handleClickViewProduct.bind(this)}>Delete Products</button>
       </div>
     </div>);
   }
