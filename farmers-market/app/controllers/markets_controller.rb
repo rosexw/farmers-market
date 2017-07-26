@@ -2,18 +2,29 @@ class MarketsController < ApplicationController
 
   def index
     if params[:param]
-      @market = Market.find_markets_around_me(params[:param], 10)
+      @market = Market.find_markets_around_me(params[:param], 1)
       @hash = Gmaps4rails.build_markers(@market) do |market, marker|
         marker.lat market.lat
         marker.lng market.long
-        marker.infowindow market.description
+        marker.infowindow "<strong>#{market.name}</strong>"
       end
+      search_location_raw = Geocoder.coordinates(params[:param])
+      @search_location = {
+        :lat=>search_location_raw[0],
+        :lng=>search_location_raw[1],
+        :infowindow=>"<strong>Location_Searched</strong>",
+        :radius => 1609.344,
+        :strokeColor => "#FF0000",
+        :fillColor => "#000000"
+      }
+      puts @search_location
+
     else
       @market = Market.all
       @hash = Gmaps4rails.build_markers(@market) do |market, marker|
         marker.lat market.lat
         marker.lng market.long
-        marker.infowindow "#{market.name}"
+        marker.infowindow "<strong>#{market.name}</strong>"
       end
     end
   end
@@ -24,7 +35,7 @@ class MarketsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@market) do |market, marker|
       marker.lat market.lat
       marker.lng market.long
-      marker.infowindow "#{market.name}"
+      marker.infowindow "<strong>#{market.name}</strong>"
     end
     @products_sold_here = Product.all_products_for_market(params[:id])
   end
