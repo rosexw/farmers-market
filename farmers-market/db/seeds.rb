@@ -54,14 +54,14 @@ farmer301 = Farmer.create({
 farmer302 = Farmer.create({
   id: 302,
   farm_name:  'Staite\'s Honey Enterprise',
-  email: 'farmer3@farms.com',
+  email: 'katia@farms.com',
   password_digest: BCrypt::Password.create('easy'),
   description: 'Staite\'s Honey Enterprise is a family owned and operated business serving the Toronto, Markham, York and Durham area. By choosing our honey, you are getting an environmental friendly, natural local product direct from the hive to your home, and supporting Canadian Farmers!',
-  first_name: 'Honey',
-  last_name: 'Staites',
+  first_name: 'Katia',
+  last_name: 'Alamir',
   phone_no: 9054733401,
   website_link: 'http://www.staites-honey.com',
-  image: open_asset('staites-honey.png')
+  image: open_asset('Katia.jpg')
 })
 
 farmer303 = Farmer.create({

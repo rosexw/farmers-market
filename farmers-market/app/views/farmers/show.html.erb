@@ -4,23 +4,23 @@
 
   <div class="farm_details">
     <h4><%=@farmer.farm_name %></h4>
+      <button class="btn waves-effect waves-light grey lighten-2" type="submit" name="action"><%= link_to 'Like', '/dashboard' %></button>
+        <p>
+          <%= link_to @farmer.website_link do %>
+              <%= image_tag @farmer.image.thumb, alt: @farmer.farm_name %>
+          <% end %>
+        </p>
 
-      <p>
-        <%= link_to @farmer.website_link do %>
-            <%= image_tag @farmer.image.thumb, alt: @farmer.farm_name %>
-        <% end %>
-      </p>
+        <p><%= @farmer.first_name %> <%= @farmer.last_name %></p>
+        <p><%= @farmer.phone_no %></p>
+        <p><%= link_to 'Visit this farm\'s website', @farmer.website_link %></p>
 
-      <p><%= @farmer.first_name %> <%= @farmer.last_name %></p>
-      <p><%= @farmer.phone_no %></p>
-      <p><%= link_to 'Visit this farm\'s website', @farmer.website_link %></p>
-
-    <div>
-    <p><%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(@farmer.id)})%></p>
-    <p><%= react_component("Products", {
-          products: FarmersProduct.get_products_farmer_offers(@farmer.id),
-          id: @farmer.id
-        })%></p>
-    </div>
+      <div>
+      <p><%= react_component("Markets", {markets: FarmerMarket.get_markets_farmer_participates_in(@farmer.id)})%></p>
+      <p><%= react_component("Products", {
+            products: FarmersProduct.get_products_farmer_offers(@farmer.id),
+            id: @farmer.id
+          })%></p>
+      </div>
   </div>
 </section>
