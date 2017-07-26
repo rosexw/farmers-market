@@ -29,6 +29,8 @@ h1 {
 }
 
 .farmer-profile-info {
+  border-radius: 10px;
+  background-color: white;
   border: 5px solid #3CB371;
   padding: 10px;
   width: 50%;
@@ -61,6 +63,8 @@ h1 {
 }
 
 .farmers-profile-markets-products {
+  border-radius: 10px;
+  background-color: white;
   display: block;
   border: 5px solid #3CB371;
   padding: 10px;
@@ -76,9 +80,4 @@ h1 {
     width: 100%;
     font-size: 14px;
   }
-}
-
-.edit-form {
-  max-width: 1000px;
-  margin: 0 auto;
 }

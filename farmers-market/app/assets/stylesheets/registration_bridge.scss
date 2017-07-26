@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .bridge_btn_container {
-  width: 500px;
-  margin: 0 auto;
-  left: 50%;
+  display: flex;
+  justify-content: center;
 }
 
+.register-title {
+  margin: 50px auto 10px auto;
+}
 
 .bridge_btn {
   background-color: #DC453F;

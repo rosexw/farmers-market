@@ -36,5 +36,14 @@
 body {
   background-color: #F5F4E1;
   color: #1e2127;
-  font-size: 18px;
+  font-size: 24px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.max-width-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
 }
