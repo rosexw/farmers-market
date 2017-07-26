@@ -1,6 +1,8 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo">Logo</a>
+    <%= link_to root_path do %>
+       <%= image_tag "/images/Markets+1.png", class: "some css class here" %>
+    <% end %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
     <% if current_user %>
