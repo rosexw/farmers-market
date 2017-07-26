@@ -115,3 +115,22 @@
 .action {
   padding-top: 40px;
 }
+
+.search-function {
+  max-width: 1000px;
+  align-items: center;
+  margin: 50px auto 20px auto;
+  overflow: hidden;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  .field {
+    align-items: center;
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}

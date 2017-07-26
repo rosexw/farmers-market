@@ -5,12 +5,14 @@
 <% else %>
   <h3 class='center-align'>All Markets</h3>
 <% end %>
+  <div class="search-function max-width-container">
     <form action = "/markets/" id='home_search' class='row form' method='get'>
-    <div class="input-field col s4e">
-      <%= text_field_tag :param, params[:search], :placeholder => "Address or Postal Code", :class => 'search_bar'%>
-      <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
-    </div>
-  </form>
+      <div class="input-field col s4e field">
+        <%= text_field_tag :param, params[:search], :placeholder => "Address or Postal Code", :class => 'search_bar'%>
+        <%= submit_tag "Search", :class => 'search_btn', :name => nil %>
+      </div>
+    </form>
+  </div>
   <div class="show-market-section show-market-two-columns-responsive">
     <div class="left-section">
       <% if params[:param] %>
