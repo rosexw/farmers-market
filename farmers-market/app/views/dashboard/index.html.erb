@@ -1,27 +1,31 @@
 <% if current_user %>
   <h1><%= current_user.first_name%>'s Dashboard</h1>
-  <%= react_component("UserProfile", {
-    type: 'user',
-    first_name: current_user.first_name,
-    last_name: current_user.last_name,
-    email: current_user.email
-    }) %>
 
-  <div>
-    <h2>Favourite Markets:</h2>
+  <div class="user-info">
+    <%= react_component("UserProfile", {
+      type: 'user',
+      first_name: current_user.first_name,
+      last_name: current_user.last_name,
+      email: current_user.email
+      }) %>
+  </div>
+
+  <div class="fave-markets">
+    <h5>Favourite Markets:</h5>
     <ul>
       <li><%= link_to "Metro Hall Farmer's Market", "/markets/300" %></li>
       <li><%= link_to "Nathan Phillips Square Farmer's Market", "/markets/301" %></li>
       <li><%= link_to "The Farmer's Market at SickKids", "/markets/302" %></li>
     </ul>
-
-    <h2>Favourite Farmers:</h2>
+  </div>
+  <div class="fave-farmers">
+    <h5>Favourite Farmers:</h5>
     <ul>
       <li><%= link_to "Harmony Meadows Alpacas", "/farmers/300" %></li>
       <li><%= link_to "The Cutting Veg", "/farmers/306" %></li>
       <li><%= link_to "Staite's Honey Enterprise", "/farmers/302" %></li>
     </ul>
-
+  </div>
 
   </div>
 
@@ -39,7 +43,7 @@
     phone_no: current_farmer.phone_no,
     website_link: current_farmer.website_link,
     description: current_farmer.description,
-    image: "#{current_farmer.image}"
+    image: "#{current_farmer.image.thumb}"
     }) %>
 
     <div class="farmers-profile-markets-products">
