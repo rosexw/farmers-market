@@ -21,8 +21,6 @@
       <li><%= link_to "The Cutting Veg", "/farmers/306" %></li>
       <li><%= link_to "Staite's Honey Enterprise", "/farmers/302" %></li>
     </ul>
-
-
   </div>
 
 
@@ -51,5 +49,11 @@
     </div>
 
 <% else %>
-  not yet
+<div>
+  Please sign up to start your favorites list!
+  <div>
+    <img id="drag1" src="/images/moody-carrot.gif" draggable="true" ondragstart="drag(event)" width="336" height="336">
+  </div>
+</div>
+
 <% end %>
