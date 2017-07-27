@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       puts result.inspect
     elsif user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to dashboard_index_path
+      redirect_to root_path
     else
       redirect_to '/registration_bridge/index'
     end

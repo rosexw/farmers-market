@@ -27,10 +27,6 @@
     </ul>
   </div>
 
-  </div>
-
-
-
 <% elsif current_farmer %>
   <h1><%= current_farmer.first_name%>'s Dashboard</h1>
   <%= react_component("FarmerProfile", {
@@ -55,5 +51,11 @@
     </div>
 
 <% else %>
-  not yet
+<div>
+  Please sign up to start your favorites list!
+  <div>
+    <img id="drag1" src="/images/moody-carrot.gif" draggable="true" ondragstart="drag(event)" width="336" height="336">
+  </div>
+</div>
+
 <% end %>
