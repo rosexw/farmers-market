@@ -58,12 +58,18 @@ On the user side, an individual can keep track of their favorite markets & farme
 
   ## Screenshots
 
-  -![1]()
-  -![2]()
-  -![3]()
-  -![4]()
-  -![5]()
-  -![6]()
-  -![7]()
-  -![8]()
-  -![9]()
+  -![1](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/1.png?raw=true)
+  -![2](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/2.png?raw=true)
+  -![3](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/3.png?raw=true)
+  -![4](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/4.png?raw=true)
+  -![5](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/5.png?raw=true)
+  -![6](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/6.png?raw=true)
+  -![7](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/7.png?raw=true)
+  -![8](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/8.png?raw=true)
+  -![9](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/9.png?raw=true)
+  -![10](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/10.png?raw=true)
+  ## Responsive Design
+  -![11](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/11-responsive.png?raw=true)
+  -![12](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/12-responsive.png?raw=true)
+  -![13](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/13-responsive.png?raw=true)
+  -![14](https://github.com/rosexw/farmers-market/blob/master/farmers-market/docs/14-responsive.png?raw=true)
