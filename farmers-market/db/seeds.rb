@@ -61,7 +61,7 @@ farmer302 = Farmer.create({
   last_name: 'Alamir',
   phone_no: 9054733401,
   website_link: 'http://www.staites-honey.com',
-  image: open_asset('Katia.jpg')
+  image: open_asset('staites-honey.png')
 })
 
 farmer303 = Farmer.create({
