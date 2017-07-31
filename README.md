@@ -1,6 +1,69 @@
-# farmers-market
-Final project for LHL: we are using what we learned in the past 6.5 weeks of full time bootcamp and applying it to one working app. This group consists of four members: Katia, Meagan, Rose, and Vasily.
+# Market+
 
-We are a hub where farmers (after signing in) can present the items they are currently selling, the dates, and choose the markets they will be at. Users can search by farmer, market name, product, location, or specific detail.
+## Made by
 
-MVP, React/Javascript for real time, Ruby on Rails for back end, PostgreSQL for database so we can use relational databases
+Meagan Blais - https://github.com/MeaganBlais
+Katia Al-Amir - https://github.com/kamir222
+Rose Wan - https://github.com/rosexw
+Vasiliy Klimkin - https://github.com/vasiliy-klimkin
+
+# Description
+
+Currently, if you want to find information about local farmer’s markets there are only a couple blogs which provide limited information about these markets.
+
+Since these blog postings are static by nature we recognized that consumers are not able to easily access accurate information about what each market offers.
+
+We felt that this was a problem, who doesn’t want to have easy access to fresh, local food!
+
+Based on this, we created a platform which allows farmers to create a profile that contains current information about the products they carry and the markets where they will be selling.
+On the user side, an individual can keep track of their favorite markets & farmers.
+
+## Dependencies
+
+- ruby  2.3.0
+- rails 5.0.4
+- postgres database
+
+## How to Run
+
+- Clone the repo
+- cd into the directory that you just cloned
+- run ```bundle install``` to get all the necessary gems
+- turn on postgress
+- run ``` rake db:setup ``` to create database
+- run ``` rake db:migrate ``` to create the tables in the database
+- run ``` rake db:seed ``` to get the initial seeds
+- (optional) go into postgres and verify if all the tables exist
+- run the server with ``` bin/rails server ``` or ``` bin/rails s```
+
+## Features
+
+ - Dashboard is made out of react components
+ - Site is mobile friendly (Responsive design: Open dev tools in chrome and click the phone icon to see how it behaves when the screen is smaller)
+
+## Used Case
+
+### As a Anon-user
+  - can search by products to find markets that sell the product searched
+  - can search by market name to find market with simular name in database
+  - can search by location, which shows farms in a 1 mile radius from the place that has been searched
+
+### As a farmer
+  - can add/delete products
+  - can add/delete marketes they want to participate at
+  - can view markets they are participating at
+
+### As a registered user
+  - can check favorite markets/farmers
+
+  ## Screenshots
+
+  -![1]()
+  -![2]()
+  -![3]()
+  -![4]()
+  -![5]()
+  -![6]()
+  -![7]()
+  -![8]()
+  -![9]()
